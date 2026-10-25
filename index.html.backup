@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粒子物理标准模型</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="app-container">
+        <header>
+            <h1>探索物质、能量与信息的统一框架</h1>
+            <!-- Main Navigation -->
+            <nav class="main-nav" id="main-nav">
+                <!-- Home as standalone tab -->
+                <button onclick="switchView('home')" class="nav-tab active">🏠 首页</button>
+
+                <!-- NEW: Yang Zhenning Tribute (standalone) -->
+                <button onclick="switchView('tribute')" class="nav-tab"
+                    style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 152, 0, 0.2)); border: 1px solid rgba(255, 193, 7, 0.3);">⭐
+                    致敬</button>
+
+                <!-- Matter Group -->
+                <div class="nav-group">
+                    <span class="nav-label">物质</span>
+                    <div class="nav-buttons">
+                        <button onclick="switchView('grid')" class="nav-btn">标准模型</button>
+                        <button onclick="switchView('structure')" class="nav-btn">粒子结构</button>
+                        <button onclick="switchView('higgs')" class="nav-btn">粒子质量</button>
+                    </div>
+                </div>
+
+                <!-- Energy Group - Forces first -->
+                <div class="nav-group">
+                    <span class="nav-label">能量</span>
+                    <div class="nav-buttons">
+                        <button onclick="switchView('forces')" class="nav-btn">四种力</button>
+                        <button onclick="switchView('strong')" class="nav-btn">强力</button>
+                        <button onclick="switchView('weak')" class="nav-btn">弱力</button>
+                        <button onclick="switchView('em')" class="nav-btn">电磁力</button>
+                        <button onclick="switchView('gravity')" class="nav-btn">引力</button>
+                    </div>
+                </div>
+
+                <!-- Information Group -->
+                <div class="nav-group">
+                    <span class="nav-label">信息</span>
+                    <div class="nav-buttons">
+                        <button onclick="switchView('symmetry')" class="nav-btn">诺特定理</button>
+                        <button onclick="switchView('group')" class="nav-btn">规范场</button>
+                        <button class="nav-btn" onclick="switchView('symmetry-breaking')">对称性破缺</button>
+                        <button onclick="switchView('spacetime')" class="nav-btn">时空观</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- HOME VIEW -->
+            <section id="view-home" class="view-section active">
+                <div class="home-container">
+                    <h2 class="home-title" style="cursor: pointer; transition: all 0.3s;"
+                        onclick="switchView('tribute')" onmouseover="this.style.color='#ffc107'"
+                        onmouseout="this.style.color=''">致敬杨振宁</h2>
+                    <div id="home-triangle-stage"></div>
+                </div>
+            </section>
+
+            <!-- TRIBUTE VIEW (Yang Zhenning) -->
+            <section id="view-tribute" class="view-section">
+                <!-- Content will be rendered by renderTribute() in script.js -->
+            </section>
+
+            <!-- MODULE 1: MATTER (物质) -->
+
+            <!-- 1.1 Particle Grid -->
+            <section id="view-matter-grid" class="view-section">
+                <div class="periodic-table-frame"
+                    style="background: rgba(20, 20, 30, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin: 1rem auto; max-width: 1400px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);">
+                    <div class="info-section active" id="view-info-home">
+                        <div <div class="particle-grid">
+                            <!-- Generation Labels -->
+                            <div class="gen-label">Ⅰ代</div>
+                            <div class="gen-label">Ⅱ代</div>
+                            <div class="gen-label">Ⅲ代</div>
+                            <div class="gen-label"></div> <!-- Spacer for Gauge Bosons -->
+                            <div class="gen-label"></div> <!-- Spacer for Higgs -->
+
+                            <!-- Higgs Boson (Scalar) -->
+                            <div class="particle-card scalar unstable" data-id="higgs">
+                                <div class="symbol">H</div>
+                                <div class="name">希格斯</div>
+                                <div class="mass">125.1 GeV/c²</div>
+                                <div class="spin">自旋: 0</div>
+                                <div class="decay">→ bb, WW, ZZ, γγ</div>
+                            </div>
+
+                            <!-- Fermions: Quarks -->
+                            <div class="particle-card quark generation-1 stable" data-id="up">
+                                <div class="symbol">u</div>
+                                <div class="name">上夸克</div>
+                                <div class="mass">2.2 MeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">稳定</div>
+                            </div>
+                            <div class="particle-card quark generation-2 unstable" data-id="charm">
+                                <div class="symbol">c</div>
+                                <div class="name">粲夸克</div>
+                                <div class="mass">1.28 GeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ s + W⁺</div>
+                            </div>
+                            <div class="particle-card quark generation-3 unstable" data-id="top">
+                                <div class="symbol">t</div>
+                                <div class="name">顶夸克</div>
+                                <div class="mass">173.1 GeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ b + W⁺</div>
+                            </div>
+                            <div class="particle-card boson force stable" data-id="gluon">
+                                <div class="symbol">g</div>
+                                <div class="name">胶子</div>
+                                <div class="mass">0</div>
+                                <div class="spin">自旋: 1</div>
+                                <div class="decay">稳定</div>
+                            </div>
+
+                            <div class="particle-card quark generation-1 stable" data-id="down">
+                                <div class="symbol">d</div>
+                                <div class="name">下夸克</div>
+                                <div class="mass">4.7 MeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">稳定</div>
+                            </div>
+                            <div class="particle-card quark generation-2 unstable" data-id="strange">
+                                <div class="symbol">s</div>
+                                <div class="name">奇夸克</div>
+                                <div class="mass">96 MeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ u + W⁻</div>
+                            </div>
+                            <div class="particle-card quark generation-3 unstable" data-id="bottom">
+                                <div class="symbol">b</div>
+                                <div class="name">底夸克</div>
+                                <div class="mass">4.18 GeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ c + W⁻</div>
+                            </div>
+                            <div class="particle-card boson force stable" data-id="photon">
+                                <div class="symbol">γ</div>
+                                <div class="name">光子</div>
+                                <div class="mass">0</div>
+                                <div class="spin">自旋: 1</div>
+                                <div class="decay">稳定</div>
+                            </div>
+
+                            <!-- Fermions: Leptons -->
+                            <div class="particle-card lepton generation-1 stable" data-id="electron">
+                                <div class="symbol">e</div>
+                                <div class="name">电子</div>
+                                <div class="mass">0.511 MeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">稳定</div>
+                            </div>
+                            <div class="particle-card lepton generation-2 unstable" data-id="muon">
+                                <div class="symbol">μ</div>
+                                <div class="name">μ子</div>
+                                <div class="mass">105.7 MeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ ν<sub>μ</sub> + W<sup>*</sup></div>
+                            </div>
+                            <div class="particle-card lepton generation-3 unstable" data-id="tau">
+                                <div class="symbol">τ</div>
+                                <div class="name">τ子</div>
+                                <div class="mass">1.777 GeV/c²</div>
+                                <div class="spin">自旋: 1/2</div>
+                                <div class="decay">→ ν<sub>τ</sub> + W<sup>*</sup></div>
+                            </div>
+                            <div class="particle-card boson force unstable" data-id="z-boson">
+                                <div class="symbol">Z</div>
+                                <div class="name">Z玻色子</div>
+                                <div class="mass">91.2 GeV/c²</div>
+                                <div class="spin">自旋: 1</div>
+                                <div class="decay">→ qq̄, l⁺l⁻</div>
+                            </div>
+
+                            <div class="particle-card lepton generation-1 stable" data-id="electron-neutrino">
+                                <div class="symbol">ν<sub>e</sub></div>
+                                <div class="name">电子中微子</div>
+                                <div class="mass">
+                                    < 1 eV/c²</div>
+                                        <div class="spin">自旋: 1/2</div>
+                                        <div class="decay">稳定</div>
+                                </div>
+                                <div class="particle-card lepton generation-2 stable" data-id="muon-neutrino">
+                                    <div class="symbol">ν<sub>μ</sub></div>
+                                    <div class="name">μ中微子</div>
+                                    <div class="mass">
+                                        < 0.17 MeV/c²</div>
+                                            <div class="spin">自旋: 1/2</div>
+                                            <div class="decay">稳定</div>
+                                    </div>
+                                    <div class="particle-card lepton generation-3 stable" data-id="tau-neutrino">
+                                        <div class="symbol">ν<sub>τ</sub></div>
+                                        <div class="name">τ中微子</div>
+                                        <div class="mass">
+                                            < 18.2 MeV/c²</div>
+                                                <div class="spin">自旋: 1/2</div>
+                                                <div class="decay">稳定</div>
+                                        </div>
+                                        <div class="particle-card boson force unstable" data-id="w-boson">
+                                            <div class="symbol">W<sup>±</sup></div>
+                                            <div class="name">W<sup>±</sup>玻色子</div>
+                                            <div class="mass">80.4 GeV/c²</div>
+                                            <div class="spin">自旋: 1</div>
+                                            <div class="decay">→ lν, qq̄'</div>
+                                        </div>
+
+                                        <!-- NEW: QFT Visualization Module -->
+                                        <div class="qft-module">
+                                            <div class="qft-header">
+                                                <div class="qft-title">粒子只是场的涟漪</div>
+                                                <div class="qft-toggle">
+                                                    <span class="toggle-label active" id="view-field-btn">场</span>
+                                                    <div class="toggle-switch" id="qft-toggle-switch">
+                                                        <div class="toggle-knob"></div>
+                                                    </div>
+                                                    <span class="toggle-label" id="view-particle-btn">粒子</span>
+                                                </div>
+                                            </div>
+                                            <canvas id="qft-canvas"></canvas>
+                                            <div class="qft-desc">
+                                                宇宙不是空的，而是充满了量子场。<br>
+                                                粒子只是场被激发时产生的波纹。
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="legend">
+                                        <div class="legend-item"><span class="dot quark"></span>夸克</div>
+                                        <div class="legend-item"><span class="dot lepton"></span>轻子</div>
+                                        <div class="legend-item"><span class="dot boson"></span>规范玻色子</div>
+                                        <div class="legend-item"><span class="dot scalar"></span>标量玻色子</div>
+                                    </div>
+                                </div>
+            </section>
+
+
+            <!-- 1.2 Structure (Zoom) -->
+            <!-- 1.2 Structure (Zoom) -->
+            <section id="view-matter-structure" class="view-section">
+                <div class="structure-layout">
+                    <!-- Left: Scale Ruler -->
+                    <div class="scale-ruler">
+                        <div class="ruler-track">
+                            <div class="ruler-progress"></div>
+                        </div>
+                        <div class="ruler-labels">
+                            <div class="ruler-label" data-level="quark" data-metaphor="如果夸克是一粒微尘...">
+                                <div class="ruler-info">
+                                    <span class="ruler-name">夸克</span>
+                                    <span class="ruler-val">10⁻¹⁸m</span>
+                                </div>
+                                <span class="ruler-icon holographic">✨</span>
+                            </div>
+                            <div class="ruler-label" data-level="nucleon" data-metaphor="...核子就是一粒沙">
+                                <div class="ruler-info">
+                                    <span class="ruler-name">核子</span>
+                                    <span class="ruler-val">10⁻¹⁵m</span>
+                                </div>
+                                <span class="ruler-icon holographic">⏳</span>
+                            </div>
+                            <div class="ruler-label" data-level="nucleus" data-metaphor="...原子核是由几粒沙聚成的小石子">
+                                <div class="ruler-info">
+                                    <span class="ruler-name">原子核</span>
+                                    <span class="ruler-val">10⁻¹⁴m</span>
+                                </div>
+                                <span class="ruler-icon holographic">🪨</span>
+                            </div>
+                            <div class="ruler-label" data-level="atom" data-metaphor="...原子是巨大的广场，石子在中心，电子在边缘闪烁">
+                                <div class="ruler-info">
+                                    <span class="ruler-name">原子</span>
+                                    <span class="ruler-val">10⁻¹⁰m</span>
+                                </div>
+                                <span class="ruler-icon holographic">🏙️</span>
+                            </div>
+                            <div class="ruler-label" data-level="matter" data-metaphor="...无数个广场折叠压缩，才涌现出我们眼中的宏观世界">
+                                <div class="ruler-info">
+                                    <span class="ruler-name">宏观</span>
+                                    <span class="ruler-val">Matter</span>
+                                </div>
+                                <span class="ruler-icon holographic">🪐</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: Stage -->
+                    <div class="structure-stage" id="structure-stage">
+                        <!-- Content rendered by JS -->
+                        <div class="instruction-text">点击右侧时间轴开启探索</div>
+                    </div>
+
+                    <!-- Right: Timeline Nav -->
+                    <div class="timeline-nav">
+                        <div class="timeline-item active" data-step="quark">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>夸克禁闭 (Quark Confinement)</h4>
+                                <p>夸克无法单独存在，被强力束缚在强子内部。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="nucleon">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>核子形成 (Nucleon)</h4>
+                                <p>3个夸克组成质子或中子，质量源于胶子场。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="nucleus">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>强力束缚 (Nuclear Force)</h4>
+                                <p>质子和中子通过剩余强力结合成原子核。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="atom">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>电磁束缚 (Electromagnetic Bound)</h4>
+                                <p>电子被电磁力束缚在原子核周围，形成概率云。</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-step="matter">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>物质涌现 (Matter)</h4>
+                                <p>原子构成分子，进而形成我们看到的宏观物质。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1.3 Higgs Mechanism -->
+            <!-- 1.3 Higgs Mechanism -->
+            <section id="view-matter-higgs" class="view-section">
+                <div class="deep-dive-container">
+                    <div class="higgs-header">
+                        <h3>希格斯机制 (The Higgs Mechanism)</h3>
+                        <p class="subtitle">宇宙的隐形海洋 (The Invisible Ocean)</p>
+                    </div>
+                    <div class="higgs-layout">
+                        <!-- Left: Animation Stage -->
+                        <div class="visual-stage" id="higgs-stage"></div>
+
+                        <!-- Right: Interactive Cards -->
+                        <div class="higgs-cards">
+                            <!-- 1. Photon -->
+                            <div class="higgs-card" data-particle="photon">
+                                <div class="card-decor" style="background: #fcd34d;"></div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <span class="card-icon">⚡</span>
+                                        <span class="card-title">光子 (Photon)</span>
+                                    </div>
+                                    <p class="card-desc">光子是自由的。它对此场视而不见，因此保持光速，永恒零质量。</p>
+                                    <div class="coupling-dashboard">
+                                        <div class="coupling-label">
+                                            <span>耦合度 (Coupling)</span>
+                                            <span>0%</span>
+                                        </div>
+                                        <div class="coupling-bar-track">
+                                            <div class="coupling-bar-fill" style="width: 0%; background: #fcd34d;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Electron -->
+                            <div class="higgs-card" data-particle="electron">
+                                <div class="card-decor" style="background: #4ecdc4;"></div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <span class="card-icon">⚛️</span>
+                                        <span class="card-title">电子 (Electron)</span>
+                                    </div>
+                                    <p class="card-desc">受到轻微阻碍，获得微小质量 (0.511 MeV)。</p>
+                                    <div class="coupling-dashboard">
+                                        <div class="coupling-label">
+                                            <span>耦合度 (Coupling)</span>
+                                            <span>0.005%</span>
+                                        </div>
+                                        <div class="coupling-bar-track">
+                                            <div class="coupling-bar-fill" style="width: 5%; background: #4ecdc4;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Top Quark -->
+                            <div class="higgs-card" data-particle="top-quark">
+                                <div class="card-decor" style="background: #ff6b6b;"></div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <span class="card-icon">🏋️</span>
+                                        <span class="card-title">顶夸克 (Top Quark)</span>
+                                    </div>
+                                    <p class="card-desc">与场剧烈纠缠，举步维艰，获得巨大质量 (173 GeV)。</p>
+                                    <div class="coupling-dashboard">
+                                        <div class="coupling-label">
+                                            <span>耦合度 (Coupling)</span>
+                                            <span style="color: #ff6b6b;">MAX</span>
+                                        </div>
+                                        <div class="coupling-bar-track">
+                                            <div class="coupling-bar-fill"
+                                                style="width: 100%; background: #ff6b6b; box-shadow: 0 0 10px #ff6b6b;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1.4 Electromagnetism (Everyday) -->
+            <section id="view-matter-em" class="view-section">
+                <div class="deep-dive-container">
+                    <div class="visual-stage" id="em-stage"></div>
+                    <div class="controls-panel">
+                        <h3>电磁力 (Electromagnetism)</h3>
+                        <p>构建宏观物质的力量。</p>
+                        <ul class="concept-list">
+                            <li><strong>原子</strong>: 电子被电磁力束缚在核周围。</li>
+                            <li><strong>分子</strong>: 原子通过共享电子形成分子。</li>
+                            <li><strong>宏观物质</strong>: 分子堆积形成我们看到的万物。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- MODULE 2: ENERGY (能量) -->
+
+            <!-- 2.1 Forces Web -->
+            <!-- 2.1 Forces Web (The Central Hub) -->
+            <section id="view-energy-forces" class="view-section">
+                <div class="forces-hub-container">
+                    <!-- 1. Electromagnetism (Top Left) -->
+                    <div class="hub-card" data-force="em" onclick="showSection('view-energy-em')">
+                        <div class="hub-bg-texture vector-field"></div>
+                        <div class="hub-card-header">
+                            <span class="hub-icon" style="color: #fcd34d;">⚡</span>
+                            <span class="hub-title">电磁力 (Electromagnetism)</span>
+                        </div>
+                        <div id="hub-stage-em" class="hub-canvas-container"></div>
+                        <div class="hub-data">
+                            <div class="data-row">
+                                <span class="data-label">强度 (Strength)</span>
+                                <div class="strength-blocks">
+                                    <div class="s-block active"
+                                        style="background: #fcd34d; box-shadow: 0 0 5px #fcd34d;"></div>
+                                    <div class="s-block active"
+                                        style="background: #fcd34d; box-shadow: 0 0 5px #fcd34d;"></div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block"></div>
+                                </div>
+                                <span class="data-val">1/137</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">射程 (Range)</span>
+                                <span class="range-icon ripple-icon">∞</span>
+                                <span class="data-val">无限 (Infinite)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Strong Force (Top Right) -->
+                    <div class="hub-card" data-force="strong" onclick="showSection('view-energy-strong')">
+                        <div class="hub-bg-texture fog-field"></div>
+                        <div class="hub-card-header">
+                            <span class="hub-icon" style="color: #ff6b6b;">☢️</span>
+                            <span class="hub-title">强核力 (Strong Force)</span>
+                        </div>
+                        <div id="hub-stage-strong" class="hub-canvas-container"></div>
+                        <div class="hub-data">
+                            <div class="data-row">
+                                <span class="data-label">强度 (Strength)</span>
+                                <div class="strength-blocks">
+                                    <div class="s-block active"
+                                        style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
+                                    <div class="s-block active"
+                                        style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
+                                    <div class="s-block active"
+                                        style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
+                                    <div class="s-block active"
+                                        style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
+                                    <div class="s-block active"
+                                        style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
+                                </div>
+                                <span class="data-val">1 (Strongest)</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">射程 (Range)</span>
+                                <span class="range-icon inward-icon">◉</span>
+                                <span class="data-val">极短 (Femtometer)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Weak Force (Bottom Left) -->
+                    <div class="hub-card" data-force="weak" onclick="showSection('view-energy-weak')">
+                        <div class="hub-bg-texture fog-field"></div>
+                        <div class="hub-card-header">
+                            <span class="hub-icon" style="color: #4ecdc4;">⚛️</span>
+                            <span class="hub-title">弱核力 (Weak Force)</span>
+                        </div>
+                        <div id="hub-stage-weak" class="hub-canvas-container"></div>
+                        <div class="hub-data">
+                            <div class="data-row">
+                                <span class="data-label">强度 (Strength)</span>
+                                <div class="strength-blocks">
+                                    <div class="s-block active"
+                                        style="background: #4ecdc4; box-shadow: 0 0 5px #4ecdc4;"></div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block"></div>
+                                    <div class="s-block"></div>
+                                </div>
+                                <span class="data-val">10⁻⁶</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">射程 (Range)</span>
+                                <span class="range-icon inward-icon">○</span>
+                                <span class="data-val">亚原子 (Sub-atomic)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Gravity (Bottom Right) -->
+                    <div class="hub-card" data-force="gravity" onclick="showSection('view-energy-gravity')">
+                        <div class="hub-bg-texture grid-field"></div>
+                        <div class="hub-card-header">
+                            <span class="hub-icon" style="color: #60a5fa;">🌌</span>
+                            <span class="hub-title">引力 (Gravity)</span>
+                        </div>
+                        <div id="hub-stage-gravity" class="hub-canvas-container"></div>
+                        <div class="hub-data">
+                            <div class="data-row">
+                                <span class="data-label">强度 (Strength)</span>
+                                <div class="strength-blocks">
+                                    <!-- Empty blocks for Gravity -->
+                                    <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
+                                    <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
+                                    <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
+                                    <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
+                                    <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
+                                </div>
+                                <span class="data-val"
+                                    style="color: #60a5fa; text-shadow: 0 0 5px rgba(96, 165, 250, 0.5);">10⁻³⁹
+                                    (Extremely Weak)</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">射程 (Range)</span>
+                                <span class="range-icon ripple-icon">∞</span>
+                                <span class="data-val">无限 (Infinite)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2.2 Strong Force & Mass -->
+            <section id="view-energy-strong" class="view-section">
+                <div class="strong-layout">
+                    <!-- Left: Visual Stage (60%) -->
+                    <div id="strong-stage" class="strong-stage">
+                        <!-- Canvas and Holo-UI injected by JS -->
+                    </div>
+
+                    <!-- Right: Info Panel (40%) -->
+                    <div class="strong-info-panel">
+                        <h2 class="sci-fi-title">质量的起源：能量囚笼</h2>
+                        <div class="mass-equation">E = mc²</div>
+
+                        <div class="info-block">
+                            <h3 class="holo-header">99% 的真相</h3>
+                            <div class="highlight-quote">你体重的 <span class="highlight-val">99%</span>，其实是被强力囚禁的<span
+                                    class="highlight-val">能量</span>。</div>
+                            <p>夸克本身几乎没有质量（仅占 1%）。是胶子场中狂暴的能量风暴，赋予了万物沉甸甸的质感。</p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3 class="holo-header">机制解析</h3>
+                            <ul class="tech-list">
+                                <li>
+                                    <span class="tech-icon jitter-icon"></span>
+                                    <span><strong>夸克躁动 (Jitter)</strong>: 被囚禁在飞米级空间的夸克具有极高的动能。</span>
+                                </li>
+                                <li>
+                                    <span class="tech-icon flux-icon"></span>
+                                    <span><strong>胶子通量管 (Flux Tubes)</strong>: 夸克试图分离时，能量束被拉长变亮，势能急剧增加。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2.3 Weak Force (Origin) -->
+            <section id="view-energy-weak" class="view-section">
+                <div class="deep-dive-container">
+                    <div class="visual-stage" id="weak-stage">
+                    </div>
+                    <div class="controls-panel">
+                        <h3>弱力：宇宙的炼金术 (Cosmic Alchemy)</h3>
+
+                        <div class="alchemy-timeline">
+                            <div class="timeline-item" id="text-mechanism">
+                                <div class="time-dot"></div>
+                                <div class="time-content">
+                                    <h4>1. 机制：β 衰变 (The Mechanism)</h4>
+                                    <p>中子变身 (n → p + e⁻)。弱力像手术刀一样修改原子核的质子数，改变物质本质。</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" id="text-scene">
+                                <div class="time-dot"></div>
+                                <div class="time-content">
+                                    <h4>2. 场景：超新星爆发 (The Crucible)</h4>
+                                    <p><strong>死亡即新生</strong>。只有在恒星死亡（产生铁核并爆炸）的极端瞬间，弱力才能将铁 (Fe) 转化为重元素。</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" id="text-product">
+                                <div class="time-dot"></div>
+                                <div class="time-content">
+                                    <h4>3. 产物：万物的起源 (Heavy Elements)</h4>
+                                    <p><strong>Fe → Co → Ni → Cu...</strong><br>你血液中的铁、指环上的金，皆诞生于此。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2.4 Gravity -->
+            <section id="view-energy-gravity" class="view-section">
+                <div class="deep-dive-container">
+                    <div class="visual-stage" id="gravity-stage"></div>
+                    <div class="controls-panel">
+                        <h3>引力 (Gravity)</h3>
+                        <p>时空的几何属性。</p>
+                        <ul class="concept-list">
+                            <li><strong>广义相对论</strong>: 物质告诉时空如何弯曲。</li>
+                            <li><strong>时空弯曲</strong>: 时空告诉物质如何运动。</li>
+                            <li><strong>非量子力</strong>: 目前唯一未被纳入标准模型的力。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- MODULE 3: INFORMATION (信息) -->
+
+            <!-- 3.1 Symmetry & Conservation -->
+            <section id="view-info-symmetry" class="view-section">
+                <!-- Content will be rendered by renderSymmetry() in script.js -->
+                <div id="view-symmetry" style="width: 100%; height: 100%;"></div>
+            </section>
+
+            <!-- 3.2 Group Theory (Abelian vs Non-Abelian) -->
+            <section id="view-info-group" class="view-section">
+                <div class="deep-dive-container" style="min-height: 850px;">
+                    <div class="visual-stage" id="group-stage">
+                        <!-- Rotation visualization -->
+                    </div>
+                    <div class="controls-panel">
+                        <h3
+                            style="font-size: 1.4rem; margin-bottom: 0.2rem; background: linear-gradient(90deg, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            规范场：宇宙的几何法则 (Geometry of Forces)</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8; font-style: italic; margin-bottom: 1.5rem;">"Force
+                            is mandated by symmetry." —— 所有的力，都是为了维持对称性而必须引入的几何修正。</p>
+
+                        <div class="glass-card-list" style="display: flex; flex-direction: column; gap: 1rem;">
+
+                            <!-- Card 1: U(1) -->
+                            <div class="glass-card"
+                                style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border-left: 3px solid #fcd34d; border-radius: 4px; padding: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <h4
+                                    style="color: #fcd34d; margin: 0 0 0.5rem 0; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                                    <span>⭕</span> 阿贝尔群 (U1): 相位的几何
+                                </h4>
+                                <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0; line-height: 1.5;">
+                                    像旋转一个圆圈，顺序不重要 (AB = BA)。<br>
+                                    <span
+                                        style="display: block; margin-top: 0.5rem; font-size: 0.85rem; color: #94a3b8;">
+                                        💡 <strong>韦尔 (Weyl)</strong>:
+                                        若要求每个时空点的量子相位可以独立旋转（定域规范不变性），宇宙必须引入<strong>电磁场</strong>来补偿。
+                                    </span>
+                                    <!-- 3.2.3 Gauge Fields Info Panel -->
+                                <div class="glass-card"
+                                    style="flex: 1; border-left: 4px solid #F59E0B; padding: 1.5rem; overflow-y: auto;">
+                                    <h3
+                                        style="margin-top: 0; color: #FBBF24; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                                        规范场：宇宙的几何法则 (Geometry of Forces)
+                                    </h3>
+                                    <p
+                                        style="font-style: italic; opacity: 0.7; font-size: 0.9rem; margin-bottom: 1.5rem;">
+                                        "Force is mandated by symmetry." ——所有的力，都是为了维持对称性而必须引入的几何修正。
+                                    </p>
+
+                                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                                        <!-- U(1) -->
+                                        <div class="info-item"
+                                            style="border-left: 3px solid #fcd34d; padding-left: 1rem;">
+                                            <strong
+                                                style="color: #fcd34d; font-size: 1.1rem; display: block; margin-bottom: 0.3rem;">
+                                                ○ 阿贝尔群 (U1): 相位的几何
+                                            </strong>
+                                            <div style="font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
+                                                像旋转一个圆圈，顺序不重要 (AB = BA)。<br>
+                                                <span style="display:inline-block; margin-top:0.3rem;">
+                                                    📍 <span style="color: #fff; font-weight: bold;">韦尔 (Weyl):</span>
+                                                    若要求每个时空点的量子 <span
+                                                        style="color: #fcd34d; font-weight: bold; background: rgba(252, 211, 77, 0.1); padding: 0 4px; border-radius: 4px;">相位
+                                                        (Phase)</span> 可以独立旋转（定域规范不变性），宇宙必须引入电磁场来补偿。
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!-- SU(2)/SU(3) -->
+                                        <div class="info-item"
+                                            style="border-left: 3px solid #ef4444; padding-left: 1rem;">
+                                            <strong
+                                                style="color: #ef4444; font-size: 1.1rem; display: block; margin-bottom: 0.3rem;">
+                                                ◍ 非阿贝尔群 (SU2/SU3): 自相作用
+                                            </strong>
+                                            <div style="font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
+                                                高维空间的复杂旋转，<span style="color: #ef4444; font-weight: bold;">顺序至关重要 (Order
+                                                    Matters)</span> (AB ≠ BA)。<br>
+                                                正因为旋转顺序不可交换，导致规范场本身也带有“荷”（电荷/色荷）。<br>
+                                                <span style="display:inline-block; margin-top:0.3rem;">
+                                                    ⚡ <strong>推论:</strong> 这意味着胶子之间会互相纠缠、碰撞 (<span
+                                                        style="color: #ef4444; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 0 4px; border-radius: 4px;">自相作用
+                                                        Self-Interaction</span>)。
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Yang-Mills Card -->
+                                        <div class="glass-card" style="
+                                    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(40, 30, 10, 0.9));
+                                    border: 1px solid rgba(255, 215, 0, 0.3);
+                                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.05);
+                                    position: relative;
+                                    overflow: hidden;
+                                    padding: 1.5rem;
+                                ">
+                                            <!-- Shine Effect -->
+                                            <div class="shine-bar"></div> <!-- defined in css or global style -->
+
+                                            <!-- Header -->
+                                            <div
+                                                style="text-align: center; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,215,0,0.2); padding-bottom: 1rem;">
+                                                <h3 style="
+                                        margin: 0; 
+                                        font-size: 1.4rem; 
+                                        background: linear-gradient(to right, #fcd34d, #fff, #fcd34d); 
+                                        -webkit-background-clip: text; 
+                                        -webkit-text-fill-color: transparent; 
+                                        font-weight: 800;
+                                        letter-spacing: 1px;
+                                    ">
+                                                    "Symmetry Dictates Interaction"
+                                                </h3>
+                                                <div
+                                                    style="color: #fbbf24; font-size: 0.9rem; margin-top: 0.3rem; opacity: 0.9;">
+                                                    —— 杨振宁 (Yang-Mills Theory)
+                                                </div>
+                                            </div>
+
+                                            <!-- Content -->
+                                            <div style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.7;">
+                                                <div style="margin-bottom: 1rem;">
+                                                    <strong>从“整体”到“局部”的飞跃：</strong><br>
+                                                    <span style="color: #cbd5e1; font-size: 0.9rem;">
+                                                        诺特定理揭示了全局对称对应守恒。但杨-米尔斯迈出了最关键的一步，从全局走向了 <span
+                                                            style="color: #fff; font-weight: bold; background: rgba(255, 255, 255, 0.1); padding: 2px 6px; border-radius: 4px;">局部对称
+                                                            (Local Symmetry)</span>。
+                                                    </span>
+                                                </div>
+
+                                                <div
+                                                    style="background: rgba(255, 215, 0, 0.05); padding: 0.8rem; border-radius: 8px; border-left: 3px solid #ffd700;">
+                                                    <strong>核心洞见：</strong><br>
+                                                    若允许宇宙中每个点的相位独立旋转，时空原本的连接就会“断裂”。<br>
+                                                    为了修复这种断裂，必须引入一个物理场来抵消相位差。<br>
+                                                    <span
+                                                        style="color: #fcd34d; font-weight: bold; display: block; margin-top: 0.5rem; text-shadow: 0 0 10px rgba(252, 211, 77, 0.3);">
+                                                        这一为了维持对称而引入的 <span
+                                                            style="border-bottom: 2px solid #fcd34d; padding-bottom: 1px;">“补偿场”
+                                                            (Compensating Field)</span>，正是我们所说的“力”。
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+            </section>
+
+            <!-- 3.2.5 Symmetry Breaking (NEW) -->
+            <section id="view-symmetry-breaking" class="view-section" style="display: none;"></section>
+
+            <!-- 3.3 Time & Space (Newton vs Leibniz) -->
+            <section id="view-info-spacetime" class="view-section">
+                <!-- Spacetime visualization (Full Screen, No Sidebar) -->
+                <div id="spacetime-stage" style="width: 100%; height: 100%; overflow: hidden;"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Particle Details Modal -->
+    <div id="particle-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <div class="modal-symbol"></div>
+                <div>
+                    <h2 class="modal-name"></h2>
+                    <p class="modal-type"></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc"></p>
+
+                <div class="info-section">
+                    <h3>基本性质</h3>
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <span class="label">质量 (Mass)</span>
+                            <span class="value modal-mass"></span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">电荷 (Charge)</span>
+                            <span class="value modal-charge"></span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="label">自旋 (Spin)</span>
+                            <div class="value" id="modal-spin"></div>
+                        </div>
+                        <div id="modal-decay-container"></div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>深入解析</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">寿命/衰变:</span>
+                        <span class="detail-value modal-lifetime"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">相互作用力:</span>
+                        <span class="detail-value modal-forces"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">关联结构:</span>
+                        <span class="detail-value modal-relation"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yang Chen-Ning Tribute Modal -->
+    <div id="yang-modal" class="modal hidden">
+        <div class="modal-content tribute-content">
+            <span class="close-btn yang-close">&times;</span>
+            <div class="tribute-header">
+                <h2>杨振宁与标准模型</h2>
+                <p class="subtitle">Yang-Mills Theory: The Foundation of Modern Physics</p>
+            </div>
+            <div class="tribute-body">
+                <p><strong>杨振宁 (Chen-Ning Yang)</strong> 是当代最伟大的物理学家之一。他在1954年与罗伯特·米尔斯提出的<strong>杨-米尔斯理论
+                        (Yang-Mills Theory)</strong>，是现代规范场论的基石。</p>
+
+                <div class="highlight-box">
+                    <h3>核心贡献</h3>
+                    <p>标准模型中描述强相互作用（胶子）、弱相互作用（W/Z玻色子）和电磁相互作用（光子）的数学框架，本质上都是<strong>杨-米尔斯规范场论</strong>的不同表现形式。
+                    </p>
+                </div>
+
+                <ul>
+                    <li>如果没有杨-米尔斯理论，我们就无法统一描述除引力之外的三种基本力。</li>
+                    <li>宇称不守恒定律（1957年诺贝尔奖）打破了物理学界的固有观念，直接影响了对弱相互作用的理解（如中微子和W/Z玻色子）。</li>
+                </ul>
+
+                <p class="quote">"杨振宁是继爱因斯坦和狄拉克之后，20世纪物理学界最重要的巨匠之一。"</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
