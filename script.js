@@ -2,51 +2,51 @@ const particlesData = {
     "up": {
         name: "上夸克 (Up Quark)",
         type: "费米子 (夸克)",
-        mass: "2.2 MeV/c²",
+        mass: "约 2.2 MeV/c²（MS̄，2 GeV）",
         charge: "+2/3 e",
         spin: "1/2",
         desc: "上夸克是最轻的夸克。它与下夸克一起构成了原子核中的质子和中子，是构成物质世界最基础的粒子之一。",
-        lifetime: "稳定 (在质子中)",
+        lifetime: "不以自由态存在；在稳定质子中长期存在",
         forces: "强力, 电磁力, 弱力, 引力",
         relation: "质子(uud), 中子(udd)"
     },
     "down": {
         name: "下夸克 (Down Quark)",
         type: "费米子 (夸克)",
-        mass: "4.7 MeV/c²",
+        mass: "约 4.7 MeV/c²（MS̄，2 GeV）",
         charge: "-1/3 e",
         spin: "1/2",
         desc: "下夸克是第二轻的夸克。它与上夸克配对形成质子和中子。在原子核外，自由中子会衰变成质子，涉及下夸克变为上夸克的过程。",
-        lifetime: "稳定 (在原子核中)",
+        lifetime: "不以自由态存在；束缚态稳定性取决于所处强子或原子核",
         forces: "强力, 电磁力, 弱力, 引力",
         relation: "质子(uud), 中子(udd)"
     },
     "charm": {
         name: "粲夸克 (Charm Quark)",
         type: "费米子 (夸克)",
-        mass: "1.28 GeV/c²",
+        mass: "约 1.27 GeV/c²（MS̄ 方案）",
         charge: "+2/3 e",
         spin: "1/2",
         desc: "粲夸克是第二代夸克，比上夸克重得多。它的发现（J/ψ介子）引发了粒子物理学的“十一月革命”，确立了夸克模型。",
-        lifetime: "1.1 × 10⁻¹² s",
+        lifetime: "取决于所处粲强子（典型量级 10⁻¹³–10⁻¹² s）",
         forces: "强力, 电磁力, 弱力, 引力",
         relation: "D介子, J/ψ介子"
     },
     "strange": {
         name: "奇夸克 (Strange Quark)",
         type: "费米子 (夸克)",
-        mass: "96 MeV/c²",
+        mass: "约 93 MeV/c²（MS̄，2 GeV）",
         charge: "-1/3 e",
         spin: "1/2",
         desc: "奇夸克存在于K介子等粒子中。它最早被发现于宇宙射线中，因其产生的粒子寿命异常长（“奇异”）而得名。",
-        lifetime: "1.2 × 10⁻⁸ s",
+        lifetime: "取决于所处奇异强子，不是自由夸克寿命",
         forces: "强力, 电磁力, 弱力, 引力",
         relation: "K介子, Λ重子"
     },
     "top": {
         name: "顶夸克 (Top Quark)",
         type: "费米子 (夸克)",
-        mass: "173.1 GeV/c²",
+        mass: "约 173 GeV/c²",
         charge: "+2/3 e",
         spin: "1/2",
         desc: "顶夸克是已知最重的基本粒子，其质量与金原子相当。由于寿命极短，它在强子化之前就会衰变，这为研究裸夸克性质提供了独特机会。",
@@ -57,11 +57,11 @@ const particlesData = {
     "bottom": {
         name: "底夸克 (Bottom Quark)",
         type: "费米子 (夸克)",
-        mass: "4.18 GeV/c²",
+        mass: "约 4.19 GeV/c²（MS̄）",
         charge: "-1/3 e",
         spin: "1/2",
         desc: "底夸克（或美夸克）属于第三代夸克。底夸克的衰变是研究CP破坏（物质与反物质不对称性）的重要途径。",
-        lifetime: "1.5 × 10⁻¹² s",
+        lifetime: "取决于所处底强子（典型量级 10⁻¹² s）",
         forces: "强力, 电磁力, 弱力, 引力",
         relation: "B介子"
     },
@@ -71,8 +71,8 @@ const particlesData = {
         mass: "0.511 MeV/c²",
         charge: "-1 e",
         spin: "1/2",
-        desc: "电子是带负电的稳定基本粒子，围绕原子核运动形成原子。它是电流的载体，也是化学反应的主角。",
-        lifetime: "稳定 (> 6.6×10²⁸ 年)",
+        desc: "电子是带负电的稳定基本粒子。在原子中，它以量子态形成电子概率分布，并非沿确定的行星式轨道绕核运行；它也是金属导电和化学键的关键参与者。",
+        lifetime: "在现有实验灵敏度内未观测到衰变；下限不等于已测得寿命",
         forces: "电磁力, 弱力, 引力",
         relation: "原子壳层"
     },
@@ -82,10 +82,10 @@ const particlesData = {
         mass: "105.7 MeV/c²",
         charge: "-1 e",
         spin: "1/2",
-        desc: "μ子就像是更重的电子（约重200倍）。它不稳定，主要存在于宇宙射线中，能穿透地球深处。",
+        desc: "μ子是电子的重型近亲（质量约为电子的 207 倍），可由宇宙射线等过程产生，具有较强穿透能力，但会随深度和能量耗尽逐渐减少。",
         lifetime: "2.2 × 10⁻⁶ s",
         forces: "电磁力, 弱力, 引力",
-        relation: "衰变为电子+中微子"
+        relation: "μ⁻ → e⁻ + νμ + ν̄e"
     },
     "tau": {
         name: "τ子 (Tau)",
@@ -93,7 +93,7 @@ const particlesData = {
         mass: "1.777 GeV/c²",
         charge: "-1 e",
         spin: "1/2",
-        desc: "τ子是最重的轻子，比质子还重。它是唯一能衰变成强子（如π介子）的轻子。",
+        desc: "τ子是最重的带电轻子，比质子还重。由于质量足够大，它可以通过弱衰变产生含强子的末态（如 π 介子和 τ 中微子）。",
         lifetime: "2.9 × 10⁻¹³ s",
         forces: "电磁力, 弱力, 引力",
         relation: "衰变为强子/轻子"
@@ -101,33 +101,33 @@ const particlesData = {
     "electron-neutrino": {
         name: "电子中微子 (Electron Neutrino)",
         type: "费米子 (轻子)",
-        mass: "< 1 eV/c²",
+        mass: "味态不对应单一确定质量；至少两质量本征态非零",
         charge: "0",
         spin: "1/2",
         desc: "电子中微子是电中性的，几乎不与物质相互作用。每秒钟有数万亿个来自太阳的中微子穿过你的身体。",
-        lifetime: "未知 (中微子振荡)",
+        lifetime: "中微子振荡不是粒子衰变；稳定性另行讨论",
         forces: "弱力, 引力",
-        relation: "β衰变产物"
+        relation: "β⁻ 衰变产生电子反中微子；β⁺ 衰变或电子俘获可产生电子中微子"
     },
     "muon-neutrino": {
         name: "μ中微子 (Muon Neutrino)",
         type: "费米子 (轻子)",
-        mass: "< 0.17 MeV/c²",
+        mass: "味态不对应单一确定质量；至少两质量本征态非零",
         charge: "0",
         spin: "1/2",
-        desc: "μ中微子与μ子相关联。1962年被发现，证明了中微子不止一种，导致了“两中微子实验”的诺贝尔奖。",
-        lifetime: "未知 (中微子振荡)",
+        desc: "μ中微子与 μ 子相关联。1962 年的实验区分了 μ 型与电子型中微子；这一成果后来获得 1988 年诺贝尔物理学奖。",
+        lifetime: "中微子振荡不是粒子衰变；稳定性另行讨论",
         forces: "弱力, 引力",
         relation: "π介子衰变产物"
     },
     "tau-neutrino": {
         name: "τ中微子 (Tau Neutrino)",
         type: "费米子 (轻子)",
-        mass: "< 18.2 MeV/c²",
+        mass: "味态不对应单一确定质量；至少两质量本征态非零",
         charge: "0",
         spin: "1/2",
-        desc: "τ中微子是最后被发现的轻子（2000年）。它与τ子相关联，标志着标准模型费米子家族的完整。",
-        lifetime: "未知 (中微子振荡)",
+        desc: "τ中微子的直接观测于 2000 年宣布，它与 τ 子相关联；中微子是否具有额外类型仍属于实验探索问题。",
+        lifetime: "中微子振荡不是粒子衰变；稳定性另行讨论",
         forces: "弱力, 引力",
         relation: "τ子衰变产物"
     },
@@ -137,8 +137,8 @@ const particlesData = {
         mass: "0",
         charge: "0",
         spin: "1",
-        desc: "胶子是强相互作用的传递者，负责将夸克“胶”在一起形成质子和中子。胶子本身也带有色荷，因此胶子之间也能相互作用。",
-        lifetime: "稳定 (色禁闭)",
+        desc: "胶子是 QCD 强相互作用的规范场量子，带有色荷，因此具有直接的非阿贝尔自相互作用；它不携带普通电荷。受色禁闭约束，不能将它当作自由的实物小球。",
+        lifetime: "无独立自由胶子观测（色禁闭）",
         forces: "强力 (传递者)",
         relation: "结合夸克"
     },
@@ -156,10 +156,10 @@ const particlesData = {
     "z-boson": {
         name: "Z玻色子 (Z Boson)",
         type: "玻色子 (规范)",
-        mass: "91.2 GeV/c²",
+        mass: "约 91.2 GeV/c²",
         charge: "0",
         spin: "1",
-        desc: "Z玻色子是弱相互作用的中性载体。它的发现证实了电弱统一理论（杨-米尔斯理论的应用）。",
+        desc: "Z 玻色子负责弱中性流过程。1983 年 W/Z 玻色子的发现为电弱理论提供重要验证；电弱理论使用了非阿贝尔规范理论的数学结构。",
         lifetime: "3 × 10⁻²⁵ s",
         forces: "弱力 (传递者)",
         relation: "中性流相互作用"
@@ -167,7 +167,7 @@ const particlesData = {
     "w-boson": {
         name: "W玻色子 (W Boson)",
         type: "玻色子 (规范)",
-        mass: "80.4 GeV/c²",
+        mass: "约 80.4 GeV/c²",
         charge: "±1 e",
         spin: "1",
         desc: "W玻色子带电荷，负责弱相互作用中的带电流过程，如β衰变（中子变为质子）。",
@@ -178,13 +178,13 @@ const particlesData = {
     "higgs": {
         name: "希格斯玻色子 (Higgs Boson)",
         type: "玻色子 (标量)",
-        mass: "125.1 GeV/c²",
+        mass: "约 125 GeV/c²",
         charge: "0",
         spin: "0",
-        desc: "希格斯玻色子是“上帝粒子”，是希格斯场的量子激发。基本粒子通过与希格斯场相互作用获得质量。",
-        lifetime: "1.56 × 10⁻²² s",
-        forces: "与所有有质量粒子作用",
-        relation: "赋予质量"
+        desc: "希格斯玻色子是希格斯场的量子激发；希格斯机制解释了多种基本粒子的静质量，但质子与中子的大部分质量来自 QCD 系统能量。",
+        lifetime: "约 10⁻²² s（由衰变宽度推定，存在不确定度）",
+        forces: "与 W/Z、带电轻子、夸克等耦合；对中微子的质量机制尚未明确",
+        relation: "基本粒子静质量机制（并非全部宏观物质质量）"
     }
 };
 
@@ -216,15 +216,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Decay Relationships
     const decayMap = {
         'top': ['bottom', 'w-boson'],
-        'higgs': ['bottom', 'w-boson', 'z-boson', 'photon'], // Added bottom (bb)
-        'neutron': ['proton', 'electron', 'electron-neutrino'],
-        'charm': ['strange', 'w-boson'],
-        'bottom': ['charm', 'w-boson'],
-        'strange': ['up', 'w-boson'],
-        'muon': ['muon-neutrino', 'w-boson'], // Updated to match text (νμ + W*)
-        'tau': ['tau-neutrino', 'w-boson'], // Updated to match text (ντ + W*)
+        'higgs': ['bottom', 'w-boson', 'z-boson', 'photon'], // 仅示意部分衰变道；γγ 为环路过程
+        'neutron': ['proton', 'electron'], // β⁻ 还产生电子反中微子（未单列反粒子卡片）
+        'charm': ['strange'],
+        'bottom': ['charm'],
+        'strange': ['up'],
+        'muon': ['electron', 'muon-neutrino'], // 另有电子反中微子；表格并未单列反粒子，不能高亮 νe 冒充 ν̄e
+        'tau': ['tau-neutrino'], // 末态还可有轻子或强子，不是唯一产物
         'w-boson': ['electron', 'muon', 'tau', 'up', 'down'],
-        'z-boson': ['electron', 'muon', 'tau']
+        'z-boson': ['electron', 'muon', 'tau', 'electron-neutrino', 'muon-neutrino', 'tau-neutrino']
     };
 
     cards.forEach(card => {
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     decayContainer.innerHTML = `
                         <div style="margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px;">
-                            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem;">衰变模式 (Decay Mode)</div>
+                            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem;">衰变 / 稳定性 / 味振荡</div>
                             <div style="font-size: 1.1rem; color: ${isStable ? '#4ade80' : '#fbbf24'}; font-weight: bold;">
                                 ${decayText}
                             </div>
@@ -443,19 +443,31 @@ const viewSections = document.querySelectorAll('.view-section');
 // --- Navigation Logic (Updated) ---
 // --- State Management ---
 let currentView = 'home';
-let animationFrameIds = []; // Track all animation frames
+const animationFrameIds = new Set(); // Active frames only (avoid unbounded ID growth)
+let pendingViewRender = null;
+const registeredViewObservers = new Set();
+function registerViewObserver(obs) { registeredViewObservers.add(obs); return obs; }
 
 function stopAllAnimations() {
-    animationFrameIds.forEach(id => cancelAnimationFrame(id));
-    animationFrameIds = [];
+    for (const id of animationFrameIds) cancelAnimationFrame(id);
+    animationFrameIds.clear();
+    for (const observer of registeredViewObservers) observer.disconnect();
+    registeredViewObservers.clear();
+    if (pendingViewRender !== null) { clearTimeout(pendingViewRender); pendingViewRender = null; }
 }
-
-// Helper to safely request animation
+// A scheduled callback is removed from the active set before it runs.
+// Any callback it schedules belongs to the new animation lifecycle.
 function safeRequestAnimationFrame(callback) {
     const id = requestAnimationFrame((time) => {
+        animationFrameIds.delete(id);
+        if (document.hidden || window.__smMotionPaused) {
+            // Reschedule without drawing; resume when the document becomes visible.
+            safeRequestAnimationFrame(callback);
+            return;
+        }
         callback(time);
     });
-    animationFrameIds.push(id);
+    animationFrameIds.add(id);
     return id;
 }
 
@@ -515,15 +527,27 @@ function switchView(viewId) {
         case 'group': sectionId = 'view-info-group'; renderFn = renderGroupTheory; break;
         case 'symmetry-breaking': sectionId = 'view-symmetry-breaking'; renderFn = renderSymmetryBreaking; break;
         case 'spacetime': sectionId = 'view-info-spacetime'; renderFn = renderSpacetime; break;
+        case 'evidence': sectionId = 'view-science-evidence'; renderFn = renderEvidenceV5; break;
+        case 'limits': sectionId = 'view-science-limits'; renderFn = renderLimitsV5; break;
     }
 
     if (sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
             section.classList.add('active');
-            if (renderFn) setTimeout(renderFn, 50); // Small delay to ensure DOM is ready
+            if (renderFn) {
+                const expectedView = viewId;
+                pendingViewRender = setTimeout(() => {
+                    pendingViewRender = null;
+                    if (currentView === expectedView) renderFn();
+                    installLessonGuide(expectedView);
+                }, 50);
+            }
         }
     }
+    // V10: navigation always reveals the new scene's headline and main animation,
+    // instead of preserving the previous page's mobile scroll position.
+    window.scrollTo(0, 0);
 }
 
 // Event Delegation for Buttons
@@ -546,7 +570,7 @@ document.addEventListener('click', (e) => {
 });
 
 // Initialize Home
-switchView('home'); // Changed from direct call to renderHomeTriangle
+// Home initializes in the single DOMContentLoaded handler below.
 
 // --- Home View: The Cosmic Forge (Animated Nebulae) ---
 function renderHomeTriangle() {
@@ -556,7 +580,7 @@ function renderHomeTriangle() {
 
     // ========== MAIN TITLE (Above the circles) ==========
     const titleContainer = document.createElement('div');
-    titleContainer.style.cssText = 'text-align: center; margin-bottom: 5rem; z-index: 10; transform: translateY(-20px); opacity: 0; animation: fadeSlideDown 1s ease-out forwards;';
+    titleContainer.style.cssText = 'text-align: center; width:100%; max-width:100%; margin-bottom: 2rem; z-index: 10; transform: translateY(-20px); opacity: 0; animation: fadeSlideDown 1s ease-out forwards;';
 
     const style = document.createElement('style');
     style.innerHTML = `
@@ -570,7 +594,7 @@ function renderHomeTriangle() {
     const mainTitle = document.createElement('h2');
     mainTitle.textContent = '万物归一';
     mainTitle.style.cssText = `
-        font-size: 5rem;
+        font-size: clamp(2.2rem, 8vw, 4.5rem);
         font-weight: 800;
         background: linear-gradient(to right, #fbbf24, #f59e0b, #ef4444);
         -webkit-background-clip: text;
@@ -578,7 +602,7 @@ function renderHomeTriangle() {
         background-clip: text;
         text-shadow: 0 0 50px rgba(245, 158, 11, 0.4);
         margin: 0;
-        letter-spacing: 16px;
+        letter-spacing: clamp(2px, 1vw, 10px);
         line-height: 1.1;
         padding-bottom: 15px;
     `;
@@ -586,24 +610,24 @@ function renderHomeTriangle() {
 
     const englishTitle = document.createElement('p');
     englishTitle.textContent = 'THE GRAND UNIFICATION';
-    englishTitle.style.cssText = 'font-size: 1.25rem; color: rgba(255,255,255,0.5); margin: 0 0 0 0; letter-spacing: 8px; font-weight: 300; text-transform: uppercase;';
+    englishTitle.style.cssText = 'font-size: clamp(.8rem, 2.4vw, 1.2rem); color: rgba(255,255,255,0.5); margin: 0 0 0 0; letter-spacing: clamp(2px,1vw,6px); font-weight: 300; text-transform: uppercase;';
     titleContainer.appendChild(englishTitle);
 
     const subtitle = document.createElement('p');
     subtitle.textContent = '探索物质、能量与信息的统一框架';
-    subtitle.style.cssText = 'font-size: 1rem; color: rgba(255,255,255,0.4); margin: 2rem 0 0 0; letter-spacing: 4px; font-weight: 300;';
+    subtitle.style.cssText = 'font-size: clamp(.75rem,2.8vw,1rem); color: rgba(255,255,255,0.4); margin: 1rem 0 0 0; letter-spacing: 1px; font-weight: 300;';
     titleContainer.appendChild(subtitle);
 
     stage.appendChild(titleContainer);
 
     // ========== CANVAS CONTAINER ==========
     const canvasContainer = document.createElement('div');
-    canvasContainer.style.cssText = 'position: relative; width: 550px; height: 450px;';
+    canvasContainer.style.cssText = 'position: relative; width:min(550px,100%); aspect-ratio:11 / 9; height:auto;';
 
     const canvas = document.createElement('canvas');
     canvas.width = 550;
     canvas.height = 450;
-    canvas.style.cssText = 'display: block;';
+    canvas.style.cssText = 'display:block;width:100%;height:100%;';
     canvasContainer.appendChild(canvas);
 
     stage.appendChild(canvasContainer);
@@ -832,7 +856,7 @@ function renderHomeTriangle() {
             ctx.fillText(node.sub, node.x, node.y + 15);
         });
 
-        animId = requestAnimationFrame(animate);
+        animId = safeRequestAnimationFrame(animate);
     }
 
     // Click handlers for navigation
@@ -899,284 +923,101 @@ function renderHomeTriangle() {
     canvasContainer.appendChild(tributeBadge);
 }
 
-// --- Weak Force View Logic (B2FH) ---
+// --- Physically bounded weak interaction demo: free neutron β⁻ decay ---
 function renderWeakForce() {
     const stage = document.getElementById('weak-stage');
-    stage.innerHTML = '';
-    // Removed padding to allow full width, added overflow hidden
-    stage.style.cssText = 'display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; overflow: hidden;';
-
-    // Title Removed as per user request
-
-    const container = document.createElement('div');
-    // Full width and height
-    container.style.cssText = 'position: relative; width: 80%; height: 100%; display: flex; justify-content: center; align-items: center; margin: 0 auto;';
-
+    if (!stage) return;
+    stage.replaceChildren();
+    stage.classList.add('weak-demo-stage');
     const canvas = document.createElement('canvas');
-    // Canvas will be resized by observer
-    container.appendChild(canvas);
+    canvas.className = 'weak-beta-canvas';
+    canvas.setAttribute('role','img');
+    canvas.setAttribute('aria-label','中子 udd 经弱相互作用成为质子 uud，并产生电子与电子反中微子');
+    stage.appendChild(canvas);
     const ctx = canvas.getContext('2d');
-
-    // State
-    const elements = [
-        { symbol: 'Fe', name: '铁', p: 26, n: 30, color: '#94a3b8' }, // Iron (Greyish)
-        { symbol: 'Co', name: '钴', p: 27, n: 32, color: '#60a5fa' }, // Cobalt (Blueish)
-        { symbol: 'Ni', name: '镍', p: 28, n: 30, color: '#a78bfa' }, // Nickel (Purpleish)
-        { symbol: 'Cu', name: '铜', p: 29, n: 34, color: '#fbbf24' }  // Copper (Goldish)
-    ];
-
-    let currentElIndex = 0;
-    let nucleons = [];
-    let incomingNeutron = { x: -250, y: 0, z: 0, active: true }; // Relative to center
-    let emittedParticles = []; // {x, y, vx, vy, type, life} relative to center
-    let step = 0;
-    let timer = 0;
-    let shake = 0;
-
-    // Timeline Elements
-    const timelineItems = {
-        mechanism: document.getElementById('text-mechanism'),
-        scene: document.getElementById('text-scene'),
-        product: document.getElementById('text-product')
-    };
-
-    function updateTimeline(activeKey) {
-        Object.keys(timelineItems).forEach(key => {
-            if (timelineItems[key]) {
-                if (key === activeKey) timelineItems[key].classList.add('active');
-                else timelineItems[key].classList.remove('active');
-            }
-        });
-    }
-
-    // Initialize Nucleus (Cluster) - Relative to (0,0)
-    function initNucleus(pCount, nCount) {
-        nucleons = [];
-        const total = pCount + nCount;
-        // Use Fibonacci Sphere for even distribution
-        const phi = Math.PI * (3 - Math.sqrt(5));
-
-        for (let i = 0; i < total; i++) {
-            const isProton = i < pCount;
-            const y = 1 - (i / (total - 1)) * 2; // y goes from 1 to -1
-            const radius = Math.sqrt(1 - y * y);
-            const theta = phi * i;
-
-            const rScale = 55; // Increased scale
-            // Add some random jitter for "organic" look
-            const jitter = 5;
-
-            const x = Math.cos(theta) * radius * rScale + (Math.random() - 0.5) * jitter;
-            const z = Math.sin(theta) * radius * rScale + (Math.random() - 0.5) * jitter;
-            const yPos = y * rScale + (Math.random() - 0.5) * jitter;
-
-            nucleons.push({
-                x: x, // Relative to center 0,0
-                y: yPos,
-                z: z,
-                type: isProton ? 'p' : 'n',
-                baseX: x,
-                baseY: yPos,
-                baseZ: z
-            });
-        }
-        nucleons.sort((a, b) => a.z - b.z);
-    }
-
-    initNucleus(elements[0].p, elements[0].n);
-
-    function drawSphere(ctx, x, y, r, color) {
-        const grad = ctx.createRadialGradient(x - r * 0.3, y - r * 0.3, r * 0.1, x, y, r);
-        grad.addColorStop(0, '#fff');
-        grad.addColorStop(0.3, color);
-        grad.addColorStop(1, '#000');
-        ctx.fillStyle = grad;
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, Math.PI * 2);
-        ctx.fill();
-    }
-
-    function drawFloatingTag(ctx, text, x, y, color) {
-        ctx.font = 'bold 12px Arial';
-        const width = ctx.measureText(text).width + 20;
-        const height = 24;
-
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 1;
-
-        // Pill shape
-        ctx.beginPath();
-        ctx.roundRect(x - width / 2, y - height / 2, width, height, 12);
-        ctx.fill();
-        ctx.stroke();
-
-        ctx.fillStyle = color;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(text, x, y);
-    }
-
+    let t0 = performance.now(), pauseElapsed = 0, paused = false;
+    const period = 10000;
+    const cards = Array.from(document.querySelectorAll('#view-energy-weak .weak-step'));
+    const pauseBtn = document.getElementById('weak-pause');
+    const replayBtn = document.getElementById('weak-replay');
     function resize() {
-        const rect = container.getBoundingClientRect();
-        if (rect.width === 0 || rect.height === 0) return;
-        canvas.width = rect.width;
-        canvas.height = rect.height;
-    }
-
-    // Initial resize
-    resize();
-
-    // Observer for resize
-    const observer = new ResizeObserver(resize);
-    observer.observe(container);
-
-    function animateAlchemy() {
-        if (currentView !== 'weak') return;
-        if (!document.body.contains(canvas)) return;
-
-        const cx = canvas.width / 2;
-        const cy = canvas.height / 2;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        const t = Date.now() / 1000;
-        const currentEl = elements[currentElIndex];
-
-        // Sync Timeline
-        if (step <= 1) updateTimeline('mechanism');
-        else if (step === 2) updateTimeline('scene');
-        else updateTimeline('product');
-
-        // 1. Draw Nucleus
-        nucleons.sort((a, b) => a.z - b.z);
-
-        nucleons.forEach(n => {
-            let x_draw = cx + n.x + (Math.random() - 0.5) * shake;
-            let y_draw = cy + n.y + (Math.random() - 0.5) * shake;
-            // Depth scale
-            let scale = (n.z + 100) / 100;
-            let r = 10 * scale;
-            let color = n.type === 'p' ? '#ff6b6b' : '#94a3b8';
-
-            if (step === 2 && n.isDecaying) color = '#fff';
-
-            drawSphere(ctx, x_draw, y_draw, r, color);
-        });
-
-        // Element Label (Floating Tag at Bottom)
-        drawFloatingTag(ctx, `${currentEl.symbol} - ${currentEl.name}`, cx, cy + 100, currentEl.color);
-
-        // 2. Animation Logic
-        if (step === 0) {
-            // Neutron Approach
-            if (incomingNeutron.active) {
-                incomingNeutron.x += 1.5; // Slower speed
-                // Draw relative to center
-                drawSphere(ctx, cx + incomingNeutron.x, cy + incomingNeutron.y, 10, '#94a3b8');
-
-                // Label for Neutron
-                ctx.fillStyle = '#fff';
-                ctx.font = 'bold 14px Arial';
-                ctx.textAlign = 'center';
-                ctx.fillText('n', cx + incomingNeutron.x, cy + incomingNeutron.y - 15);
-
-                if (incomingNeutron.x >= -50) {
-                    step = 1;
-                    incomingNeutron.active = false;
-
-                    // Reshape Nucleus: Re-distribute all particles to accommodate the new neutron
-                    // This creates a visible "shape change" as requested
-                    initNucleus(currentEl.p, currentEl.n + 1);
-
-                    // Mark a random neutron for decay
-                    const neutrons = nucleons.filter(n => n.type === 'n');
-                    if (neutrons.length > 0) {
-                        // Pick a random one, preferably towards the outside (higher z or radius)
-                        // Simple random is fine for visual
-                        const target = neutrons[Math.floor(Math.random() * neutrons.length)];
-                        target.isDecaying = true;
-                    }
-
-                    timer = 0;
-                }
-            }
-        } else if (step === 1) {
-            // Unstable Jitter
-            timer++;
-            shake = 3; // Less violent
-            drawFloatingTag(ctx, '不稳定 (Unstable)', cx, cy - 80, '#fbbf24');
-
-            if (timer > 100) { // Slower duration
-                step = 2;
-                timer = 0;
-            }
-        } else if (step === 2) {
-            // Beta Decay Flash
-            timer++;
-            shake = 2;
-            drawFloatingTag(ctx, 'β 衰变 (Beta Decay)', cx, cy - 80, '#4ecdc4');
-
-            // Find the decaying neutron
-            const target = nucleons.find(n => n.isDecaying);
-            if (target && timer === 1) {
-                // Emit particles (relative to nucleus center)
-                emittedParticles.push({ x: target.x, y: target.y, vx: 2.5, vy: -1, type: 'e', color: '#3b82f6' });
-                emittedParticles.push({ x: target.x, y: target.y, vx: 2.5, vy: 1, type: 'v', color: 'rgba(255,255,255,0.5)' });
-            }
-
-            if (timer > 60) { // Slower flash
-                if (target) {
-                    target.type = 'p';
-                    target.isDecaying = false;
-                }
-                step = 3;
-                timer = 0;
-                // Update Element
-                if (currentElIndex < elements.length - 1) {
-                    currentElIndex++;
-                } else {
-                    currentElIndex = 0;
-                    initNucleus(elements[0].p, elements[0].n); // Reset
-                }
-            }
-        } else if (step === 3) {
-            // Cooldown / Next Element
-            timer++;
-            shake = 0;
-
-            if (timer > 200) { // Longer cooldown
-                // Reset for next cycle
-                step = 0;
-                incomingNeutron.x = -cx - 50; // Reset off-screen left
-                incomingNeutron.active = true;
-                emittedParticles = [];
-
-                if (currentElIndex === 0) {
-                    // Already reset
-                }
-            }
+        const r = stage.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const targetW=Math.max(300,Math.round(r.width*dpr));
+        const targetH=Math.max(260,Math.round(r.height*dpr));
+        if(canvas.width!==targetW || canvas.height!==targetH) {
+            canvas.width=targetW;canvas.height=targetH;
+            ctx.setTransform(dpr,0,0,dpr,0,0);
         }
-
-        // 3. Draw Emitted Particles
-        emittedParticles.forEach(p => {
-            p.x += p.vx;
-            p.y += p.vy;
-            drawSphere(ctx, cx + p.x, cy + p.y, p.type === 'e' ? 5 : 3, p.color);
-            if (p.type === 'e') {
-                ctx.fillStyle = '#3b82f6';
-                ctx.fillText('e-', cx + p.x, cy + p.y - 10);
-            } else {
-                ctx.fillStyle = '#fff';
-                ctx.fillText('v', cx + p.x, cy + p.y - 10);
-            }
-        });
-
-        safeRequestAnimationFrame(animateAlchemy);
+        canvas.style.width = '100%'; canvas.style.height = '100%';
     }
-    safeRequestAnimationFrame(animateAlchemy);
-
-    stage.appendChild(container);
+    const observer = registerViewObserver(new ResizeObserver(resize));
+    observer.observe(stage); resize();
+    function rounded(cx,cy,r,color,label) {
+        ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);
+        const g=ctx.createRadialGradient(cx-r/3,cy-r/3,2,cx,cy,r);
+        g.addColorStop(0,'#ffffff');g.addColorStop(.26,color);g.addColorStop(1,'#17243f');
+        ctx.fillStyle=g;ctx.fill();ctx.strokeStyle='rgba(255,255,255,.3)';ctx.stroke();
+        ctx.fillStyle='#fff';ctx.font='700 16px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(label,cx,cy+1);
+    }
+    function draw(now) {
+        if (currentView !== 'weak' || !document.body.contains(canvas)) return;
+        const elapsed=paused ? pauseElapsed : (now - t0)%period;
+        const ph=elapsed<2100?0:elapsed<4400?1:elapsed<7200?2:3;
+        cards.forEach((el,i)=>el.classList.toggle('active',i===ph));
+        const w=stage.clientWidth,h=stage.clientHeight;
+        ctx.clearRect(0,0,w,h);
+        const grd=ctx.createLinearGradient(0,0,w,h);grd.addColorStop(0,'#0e1531');grd.addColorStop(1,'#0b1027');ctx.fillStyle=grd;ctx.fillRect(0,0,w,h);
+        ctx.strokeStyle='rgba(109,167,255,.09)';ctx.lineWidth=1;
+        for(let x=18;x<w;x+=30){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke();}
+        for(let y=18;y<h;y+=30){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+        const cx=w*.38,cy=h*.48,sz=Math.min(58,w*.12),r=sz*.65;
+        const pulse=(Math.sin(elapsed*.006)+1)*.5;
+        const changed=ph>=2;
+        const quarks= changed?['u','u','d']:['u','d','d'];
+        ctx.beginPath();ctx.arc(cx,cy,sz*(1.62+.04*pulse),0,Math.PI*2);ctx.fillStyle='rgba(95,170,255,.08)';ctx.fill();ctx.strokeStyle='rgba(95,170,255,'+(.25+.30*pulse)+')';ctx.lineWidth=2;ctx.stroke();
+        [[0,-.9],[-.84,.55],[.84,.55]].forEach(([dx,dy],i)=>{const isU=quarks[i]==='u';rounded(cx+dx*sz,cy+dy*sz,r,isU?'#fa6479':'#5cbcc5',quarks[i]);});
+        ctx.textAlign='center';ctx.textBaseline='alphabetic';ctx.font='700 21px sans-serif';ctx.fillStyle='#fff';
+        ctx.fillText(changed?'质子 p (uud)':'中子 n (udd)',cx,cy+sz*1.94);
+        ctx.font='14px sans-serif';ctx.fillStyle='#b9c6e8';ctx.fillText(changed?'电荷 +1e':'电荷 0',cx,cy+sz*2.3);
+        if(ph===1){
+          const pulse=.5+.5*Math.sin(elapsed*.01);
+          rounded(cx+sz*.84,cy+sz*.55,r+6*pulse,'#f87a83','d→u');
+          ctx.fillStyle='#fbbf24';ctx.font='700 17px sans-serif';ctx.fillText('d → u + W⁻*（虚）',cx,cy-sz*2.18);
+        }
+        if(ph>=2){
+           const progress=Math.min(1,(elapsed-4400)/1100);
+           const sx=cx+sz*1.6;
+           const ex=Math.min(w-48,sx+Math.max(65,w*.20)*progress);
+           ctx.strokeStyle='#e9a1b2';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(sx,cy-8);ctx.lineTo(ex-16,cy-70*progress);ctx.stroke();
+           ctx.strokeStyle='#84b4ff';ctx.beginPath();ctx.moveTo(sx,cy+8);ctx.lineTo(ex-16,cy+80*progress);ctx.stroke();
+           rounded(ex,cy-70*progress,Math.max(14,r*.60),'#f07389','e⁻');
+           rounded(ex,cy+80*progress,Math.max(14,r*.60),'#5c9ffd','ν̄ₑ');
+           ctx.fillStyle='#e4c6a3';ctx.font='14px sans-serif';ctx.textAlign='center';ctx.fillText('W⁻* → e⁻ + ν̄ₑ',Math.min(w-118,cx+sz*2.3),cy-110);
+        }
+        ctx.fillStyle='#a8b9df';ctx.textAlign='left';ctx.font='13px sans-serif';
+        ctx.fillText('粒子位置、大小和运动路径是教学示意，并非真实量子轨迹',14,h-20);
+        if(ph===3){ctx.fillStyle='#a6f6d4';ctx.textAlign='center';ctx.font='700 18px sans-serif';ctx.fillText('电荷守恒：0 = +1 − 1 + 0',w/2,48);}
+        // When paused, stop scheduling frames entirely: no hidden 60 fps loop.
+        if (!paused) safeRequestAnimationFrame(draw);
+    }
+    pauseBtn.onclick=()=>{
+        if (!paused) {
+            pauseElapsed=(performance.now()-t0)%period;
+            paused=true;pauseBtn.textContent='继续';
+        } else {
+            t0=performance.now()-pauseElapsed;
+            paused=false;pauseBtn.textContent='暂停';
+            safeRequestAnimationFrame(draw);
+        }
+    };
+    replayBtn.onclick=()=>{
+        const wasPaused=paused;
+        t0=performance.now();pauseElapsed=0;paused=false;
+        pauseBtn.textContent='暂停';
+        if (wasPaused) safeRequestAnimationFrame(draw);
+    };
+    safeRequestAnimationFrame(draw);
 }
 
 function createOriginCard(title, elements, desc, color) {
@@ -1288,14 +1129,14 @@ function renderTribute() {
             杨振宁
         </h1>
         <p style="font-size: 0.85rem; color: rgba(255, 193, 7, 0.7); margin: 0.5rem 0; letter-spacing: 2px;">
-            Chen-Ning Yang · 1922—
+            Chen-Ning Yang · 1922—2025
         </p>
         <div style="width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #fcd34d, transparent); margin: 1rem auto;"></div>
         <p style="font-size: 1.1rem; color: #fcd34d; margin: 0; font-style: italic;">
-            物理学的"立法者"
+            非阿贝尔规范理论的奠基者
         </p>
         <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.4); margin: 0.3rem 0 0 0; letter-spacing: 1px;">
-            The Legislator of Physics
+            Yang–Mills Theory · 1954
         </p>
     `;
     leftPanel.appendChild(nameSection);
@@ -1331,21 +1172,21 @@ function renderTribute() {
             subtitle: 'The Theorist',
             icon: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#fcd34d" stroke-width="1.5"><circle cx="16" cy="16" r="10"/><path d="M16 6 L16 2"/><path d="M16 26 L16 30"/><path d="M6 16 L2 16"/><path d="M26 16 L30 16"/><path d="M9 9 L6 6"/><path d="M23 9 L26 6"/><path d="M9 23 L6 26"/><path d="M23 23 L26 26"/></svg>',
             heading: '为造物主制定"语法"',
-            content: '杨-米尔斯理论 (Yang-Mills) 是现代物理学的"大宪章"。他颠覆了认知——指出<strong style="color:#fcd34d">「对称性支配相互作用」</strong>。从此，强力、弱力与电磁力被统一在同一套几何语言之下。这是物理学真正的源代码。'
+            content: '杨-米尔斯理论 (Yang-Mills) 是现代物理学的"大宪章"。他与米尔斯将<strong style="color:#fcd34d">非阿贝尔局域规范对称性</strong>发展成可计算的场论框架。它后来成为弱相互作用和强相互作用理论的重要数学基础；这不意味着三种力已经被物理上统一为同一种力。'
         },
         {
             title: '立功',
             subtitle: 'The Patriot',
             icon: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#fcd34d" stroke-width="1.5"><path d="M16 4 L16 28"/><path d="M8 8 L16 12 L24 8"/><path d="M4 16 L16 20 L28 16"/><circle cx="16" cy="4" r="2"/></svg>',
             heading: '为大国科学"校准航向"',
-            content: '从破冰中美交流，到创建清华高研院；从引进图灵奖得主，到在关键时刻为千亿对撞机按下<strong style="color:#fcd34d">「暂停键」</strong>。他不仅是象牙塔里的大师，更是国家科学资源配置的理性"守护者"。'
+            content: '他长期推动学术交流、人才培养与科学教育，也曾公开讨论大型对撞机的建设时机和资源优先级。不同科学政策观点应与其可核验的物理学成果区分，不将个人主张写成已实际终止工程的决定。'
         },
         {
             title: '立德',
             subtitle: 'The Mentor',
             icon: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#fcd34d" stroke-width="1.5"><path d="M16 4 L16 18"/><path d="M10 10 L16 4 L22 10"/><circle cx="16" cy="24" r="4"/><path d="M12 28 L16 24 L20 28"/></svg>',
             heading: '为后学垂范"科学品味"',
-            content: '他重塑了中华民族的智力自信。他一生坚持<strong style="color:#fcd34d">「Taste（品味）」</strong>至上，反对学术投机。这种对科学美学的极致追求，如灯塔般指引着下一代科学家走出模仿，走向创造。'
+            content: '他重视物理学的数学结构、简洁性和理论美感。但美感是研究启发，不是定理正确性的证据；最终仍需逻辑推导与实验验证。'
         }
     ];
 
@@ -1397,7 +1238,7 @@ function renderTribute() {
     footer.style.cssText = 'margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05);';
     footer.innerHTML = `
         <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); margin: 0; font-style: italic; text-align: center;">
-            "Symmetry dictates interaction." — Yang-Mills Theory, 1954
+            “对称性约束相互作用的形式”——概括性说明，非论文原文引语
         </p>
     `;
     rightPanel.appendChild(footer);
@@ -1478,7 +1319,7 @@ function renderSpacetime() {
     leftCol.appendChild(einsteinCard);
 
     // 3. Quantum Crisis
-    const quantumCard = createCard('3. 量子泡沫 (Quantum Foam)', '<strong>危机！</strong> 普朗克尺度，时空崩解为泡沫。', '#a855f7');
+    const quantumCard = createCard('3. 量子泡沫 (Quantum Foam)', '<strong>危机！</strong>在极小的尺度上，平滑时空也许变成量子泡沫。', '#a855f7');
     const quantumCanvas = createCanvas(300, 70);
     quantumCard.appendChild(quantumCanvas);
     leftCol.appendChild(quantumCard);
@@ -1496,19 +1337,19 @@ function renderSpacetime() {
     rightCol.appendChild(rightHeader);
 
     // 1. Micro Time
-    const microCard = createCard('1. 微观：时间可逆 (Reversible)', '粒子碰撞录像倒放，依然符合物理定律。', '#f97316');
+    const microCard = createCard('1. 微观：时间可逆 (Reversible)', '许多微观过程把录像倒放，依然可以符合物理定律。', '#f97316');
     const microCanvas = createCanvas(300, 70);
     microCard.appendChild(microCanvas);
     rightCol.appendChild(microCard);
 
     // 2. Macro Time
-    const macroCard = createCard('2. 宏观：熵增不可逆 (Irreversible)', '墨水扩散录像倒放？<strong>绝不可能！</strong>', '#ea580c');
+    const macroCard = createCard('2. 宏观：熵增不可逆 (Irreversible)', '墨水扩散录像倒放？<strong>几乎不可能！</strong>', '#ea580c');
     const macroCanvas = createCanvas(300, 70);
     macroCard.appendChild(macroCanvas);
     rightCol.appendChild(macroCard);
 
     // 3. The End of Time
-    const endCard = createCard('3. 时间的终结 (End of Time)', '<strong>危机！</strong> 量子引力中，变量 <span style="font-family: \'Times New Roman\', serif; font-style: italic;">t</span> 消失了。', '#dc2626');
+    const endCard = createCard('3. 时间的终结 (End of Time)', '<strong>危机！</strong>某些量子引力方程里，熟悉的时间参数 <em>t</em> 消失了。', '#dc2626');
     const endCanvas = createCanvas(300, 70);
     endCard.appendChild(endCanvas);
     rightCol.appendChild(endCard);
@@ -1684,7 +1525,7 @@ function renderSpacetime() {
         }
         ctxQ.restore();
         // FIXED: Physics Logic - Scale: Planck
-        drawLabel(ctxQ, 'SCALE: PLANCK', noiseLevel > 1 ? '⚠️ FOAM' : '', '#a855f7');
+        drawLabel(ctxQ, 'SCALE: PLANCK', '', '#a855f7');
 
 
         // 4. Micro Time (Glow)
@@ -1724,7 +1565,7 @@ function renderSpacetime() {
         ctxMacro.fillStyle = '#ea580c';
         inkParticles.forEach(p => { ctxMacro.beginPath(); ctxMacro.arc(p.x, p.y, 2, 0, Math.PI * 2); ctxMacro.fill(); });
         ctxMacro.shadowBlur = 0; // Reset
-        drawLabel(ctxMacro, macroPhase === 'forward' ? 'DIFFUSION' : 'REWIND', macroPhase === 'forward' ? 'NORMAL' : 'ABSURD', '#ea580c');
+        drawLabel(ctxMacro, macroPhase === 'forward' ? 'DIFFUSION' : 'REWIND', macroPhase === 'forward' ? 'NORMAL' : '统计极低概率', '#ea580c');
 
 
         // 6. The End of Time (Dissolving Hourglass)
@@ -1774,7 +1615,7 @@ function renderSpacetime() {
         ctxEnd.globalAlpha = 1;
         ctxEnd.shadowBlur = 0; // Reset
 
-        drawLabel(ctxEnd, 't = ?', 'DISSOLVING', '#dc2626');
+        drawLabel(ctxEnd, 't = ?', '', '#dc2626');
 
         safeRequestAnimationFrame(animate);
     }
@@ -2363,7 +2204,7 @@ function createComplexNucleus(stage) { // This is the old createNucleus, renamed
     });
 
     const label = document.createElement('div');
-    label.innerHTML = '<h3>原子核 (Nucleus)</h3><p>强相互作用克服了质子间的电磁斥力</p>';
+    label.innerHTML = '<h3>原子核 (Nucleus)</h3><p>剩余强相互作用可在特定核结构中形成束缚，与质子间电磁斥力竞争</p>';
     label.style.cssText = `
     position: absolute; bottom: -80px; width: 300px; text-align: center; left: 50%; transform: translateX(-50%);
     `;
@@ -2396,7 +2237,7 @@ function createAtom(stage) {
     container.appendChild(orbit);
 
     const label = document.createElement('div');
-    label.innerHTML = '<h3>原子 (Atom)</h3><p>电磁力束缚电子绕核运动</p>';
+    label.innerHTML = '<h3>原子 (Atom)</h3><p>电子处于原子量子态，概率云不是确定的绕核轨道</p>';
     label.style.cssText = `position: absolute; bottom: -60px; width: 100%; text-align: center;`;
 
     stage.appendChild(container);
@@ -2518,13 +2359,13 @@ function renderStrongForce() {
     stage.appendChild(uiLayer);
 
     // Trigger Fade In
-    requestAnimationFrame(() => {
+    safeRequestAnimationFrame(() => {
         uiLayer.style.opacity = '1';
     });
 
     // Create Labels with HUD-style formatting
-    const labelQuark = createHoloLabel(uiLayer, '<1%', '夸克本征质量', 'right');
-    const labelField = createHoloLabel(uiLayer, '>99%', '胶子场势能 (质量来源)', 'left');
+    const labelQuark = createHoloLabel(uiLayer, '约1%', '价夸克静质量', 'right');
+    const labelField = createHoloLabel(uiLayer, '约99%', 'QCD系统贡献', 'left');
 
     let width, height, cx, cy;
     let particles = [];
@@ -2583,11 +2424,17 @@ function renderStrongForce() {
         const textBox = el.querySelector('.text-box');
         const dot = el.querySelector('.target-dot');
 
-        // Position label away from target
-        // Dynamic offset based on alignment
-        // Adjusted offsets to avoid overlap
-        const offsetX = align === 'right' ? 100 : -280;
-        const offsetY = align === 'right' ? -60 : 120; // Move left label further down
+        // V10: keep the ORIGINAL glowing leader labels, but clamp their
+        // endpoints to the actual stage so the 1% / 99% message never vanishes.
+        const stageW = Math.max(320, stage.clientWidth || 640);
+        const stageH = Math.max(250, stage.clientHeight || 480);
+        const labelW = 154, labelH = 62;
+        const desiredX = align === 'right' ? targetX + 52 : targetX - 185;
+        const desiredY = align === 'right' ? targetY - 75 : targetY + 71;
+        const boxX = Math.max(7, Math.min(stageW - labelW - 7, desiredX));
+        const boxY = Math.max(7, Math.min(stageH - labelH - 7, desiredY));
+        const offsetX = boxX - targetX;
+        const offsetY = boxY - targetY;
 
         // The 'el' is positioned at the TARGET
         el.style.left = targetX + 'px';
@@ -2609,7 +2456,11 @@ function renderStrongForce() {
         textBox.style.position = 'absolute';
         textBox.style.left = offsetX + 'px';
         textBox.style.top = offsetY + 'px';
-        textBox.style.whiteSpace = 'nowrap';
+        textBox.style.whiteSpace = 'normal';
+        textBox.style.width = '154px';
+        textBox.style.minWidth = '0';
+        textBox.style.maxWidth = '154px';
+        textBox.style.boxSizing = 'border-box';
 
         // Line from 0,0 to Text Box
         // Calculate length and angle
@@ -2765,13 +2616,13 @@ function renderStrongForce() {
         updateLabel(labelQuark, particles[0].x, particles[0].y);
         updateLabel(labelField, cx, cy);
 
-        animationFrameId = requestAnimationFrame(animate);
+        animationFrameId = safeRequestAnimationFrame(animate);
     }
 
     // Use ResizeObserver
-    const observer = new ResizeObserver(() => {
+    const observer = registerViewObserver(new ResizeObserver(() => {
         resize();
-    });
+    }));
     observer.observe(stage);
 
     resize();
@@ -2819,7 +2670,7 @@ function renderGroupTheory() {
     wrapper.appendChild(comparisonTitle);
 
     const comparisonSubtitle = document.createElement('p');
-    comparisonSubtitle.innerHTML = '线性传播 vs 非线性纠缠 (Linear Propagation vs Nonlinear Entanglement)';
+    comparisonSubtitle.innerHTML = '阿贝尔场与非阿贝尔场的自相互作用区别 (Gauge self-interaction)';
     comparisonSubtitle.style.cssText = 'margin-bottom: 1rem; color: rgba(255,255,255,0.6); font-size: 0.8rem; font-style: italic; text-align: center;';
     wrapper.appendChild(comparisonSubtitle);
 
@@ -2832,9 +2683,9 @@ function renderGroupTheory() {
     const photonPanel = document.createElement('div');
     photonPanel.style.cssText = 'flex: 1; background: rgba(252, 211, 77, 0.05); border: 1px solid rgba(252, 211, 77, 0.3); border-radius: 12px; padding: 1rem; position: relative; display: flex; flex-direction: column; justify-content: space-between;';
     photonPanel.innerHTML = `
-        <h4 style="color: #fcd34d; margin: 0 0 0.5rem 0; font-size: 0.95rem;">📡 U(1): 光子互不理睬</h4>
+        <h4 style="color: #fcd34d; margin: 0 0 0.5rem 0; font-size: 0.95rem;">📡 U(1) 电磁：无直接光子自耦合</h4>
         <canvas id="photon-demo" style="width: 100%; height: 80px; background: rgba(0,0,0,0.2); border-radius: 8px;"></canvas>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.75rem; opacity: 0.8; color: #fcd34d;">光子不带电荷 → 穿过彼此</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.75rem; opacity: 0.8; color: #fcd34d;">自由光子无树级直接自耦合；量子环图可产生光—光散射</p>
     `;
     comparisonContainer.appendChild(photonPanel);
 
@@ -2842,9 +2693,9 @@ function renderGroupTheory() {
     const gluonPanel = document.createElement('div');
     gluonPanel.style.cssText = 'flex: 1; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 1rem; position: relative; display: flex; flex-direction: column; justify-content: space-between;';
     gluonPanel.innerHTML = `
-        <h4 style="color: #ef4444; margin: 0 0 0.5rem 0; font-size: 0.95rem;">✴️ SU(3): 胶子互相纠缠</h4>
+        <h4 style="color: #ef4444; margin: 0 0 0.5rem 0; font-size: 0.95rem;">✴️ SU(3) 色：胶子存在自相互作用</h4>
         <canvas id="gluon-demo" style="width: 100%; height: 80px; background: rgba(0,0,0,0.2); border-radius: 8px;"></canvas>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.75rem; opacity: 0.8; color: #ef4444;">胶子带荷 → 纠缠打结</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.75rem; opacity: 0.8; color: #ef4444;">胶子携带色荷 → 非线性自相互作用（不是量子纠缠）</p>
     `;
     comparisonContainer.appendChild(gluonPanel);
 
@@ -2857,9 +2708,9 @@ function renderGroupTheory() {
 
     // Fiber Objects
     const fibers = [
-        { id: 'u1', label: 'U(1) 电磁', color: '#fcd34d', type: 'U1', x: 200, phase: 0, speed: Math.random() * 2 + 1 },
-        { id: 'su2', label: 'SU(2) 弱力', color: '#4ecdc4', type: 'SU2', x: 400, phase: 0, speed: Math.random() * 2 + 1 },
-        { id: 'su3', label: 'SU(3) 强力', color: '#ff6b6b', type: 'SU3', x: 600, phase: 0, speed: Math.random() * 2 + 1 }
+        { id: 'u1', label: 'U(1) 电磁（破缺后）', color: '#fcd34d', type: 'U1', x: 200, phase: 0, speed: Math.random() * 2 + 1 },
+        { id: 'su2', label: 'SU(2)L（电弱前）', color: '#4ecdc4', type: 'SU2', x: 400, phase: 0, speed: Math.random() * 2 + 1 },
+        { id: 'su3', label: 'SU(3)c（强）', color: '#ff6b6b', type: 'SU3', x: 600, phase: 0, speed: Math.random() * 2 + 1 }
     ];
 
     function animateFiberBundle() {
@@ -2927,13 +2778,13 @@ function renderGroupTheory() {
         } else if (phase === 'CORRECTION') {
             ctx.fillStyle = 'rgba(252, 211, 77, 1)';
             ctx.font = 'bold 24px "Inter", sans-serif';
-            ctx.fillText('3. Gauge Force Correction (规范场修复)', cx, 40);
+            ctx.fillText('3. Gauge connection (规范联络)', cx, 40);
             ctx.font = '16px "Inter", sans-serif';
             ctx.fillText('Force = Curvature Compensation', cx, 70);
         } else {
             ctx.fillStyle = 'rgba(74, 222, 128, 1)';
             ctx.font = 'bold 24px "Inter", sans-serif';
-            ctx.fillText('4. Symmetry Restored (对称性恢复)', cx, 40);
+            ctx.fillText('4. Covariant description (协变描述)', cx, 40);
             ctx.font = '16px "Inter", sans-serif';
             ctx.fillText('Local Gauge Invariance maintained.', cx, 70);
         }
@@ -3650,13 +3501,13 @@ function initHubCanvas(container, drawFn) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         const t = Date.now() / 1000;
         drawFn(ctx, canvas.width, canvas.height, t);
-        animationFrameId = requestAnimationFrame(animate);
+        animationFrameId = safeRequestAnimationFrame(animate);
     }
 
     // Use ResizeObserver to handle size changes and initial visibility
-    const observer = new ResizeObserver(() => {
+    const observer = registerViewObserver(new ResizeObserver(() => {
         resize();
-    });
+    }));
     observer.observe(container);
 
     // Initial resize attempt
@@ -3686,6 +3537,10 @@ function renderHiggs() {
     canvas.style.width = '100%';
     canvas.style.height = '100%';
     stage.appendChild(canvas);
+    const legend=document.createElement('div');
+    legend.style.cssText='position:absolute;bottom:8px;left:9px;right:9px;padding:5px 8px;color:#e2e8f0;font-size:11px;line-height:1.4;background:rgba(0,0,0,.72);border-radius:5px;pointer-events:none;';
+    legend.textContent='耦合类别示意：颜色和光晕不代表真实形变、阻力或速度；三种粒子采用相同的动画速度。';
+    stage.appendChild(legend);
     const ctx = canvas.getContext('2d');
 
     let particles = [];
@@ -3702,14 +3557,14 @@ function renderHiggs() {
         // Re-init Particles (maintain relative Y)
         const h = canvas.height;
         particles = [
-            { x: 50, y: h * 0.16, mass: 0, color: '#fcd34d', label: '光子', speed: 12, trail: true },
-            { x: 50, y: h * 0.50, mass: 1, color: '#4ecdc4', label: '电子', speed: 4, trail: false },
-            { x: 50, y: h * 0.84, mass: 10, color: '#ff6b6b', label: '顶夸克', speed: 0.5, trail: false }
+            { x: 50, y: h * 0.16, mass: 0, color: '#fcd34d', label: '光子', speed: 2.4, trail: true },
+            { x: 50, y: h * 0.50, mass: 1, color: '#4ecdc4', label: '电子', speed: 2.4, trail: false },
+            { x: 50, y: h * 0.84, mass: 10, color: '#ff6b6b', label: '顶夸克', speed: 2.4, trail: false }
         ];
 
         // Re-init Grid
         gridPoints = [];
-        const spacing = 20;
+        const spacing = 25;
         for (let x = 0; x < canvas.width + 50; x += spacing) {
             for (let y = 0; y < canvas.height; y += spacing) {
                 gridPoints.push({
@@ -3760,10 +3615,7 @@ function renderHiggs() {
                     // Drag / Clustering Effect
                     const range = part.mass > 5 ? 150 : 60;
                     if (dist < range) {
-                        const force = (part.mass * 1200) / (dist * dist + 100);
-                        const angle = Math.atan2(dy, dx);
-                        targetX -= Math.cos(angle) * force;
-                        targetY -= Math.sin(angle) * force;
+                        // Educational highlighting only. No force, drag, spatial displacement or speed change.
                         active = true;
                         if (part.mass > 5) clustering = true;
                     }
@@ -3777,27 +3629,10 @@ function renderHiggs() {
             // Draw Point
             ctx.fillStyle = active ? `rgba(168, 85, 247, ${clustering ? 0.9 : 0.4})` : `rgba(59, 130, 246, 0.15)`;
             ctx.beginPath();
-            ctx.arc(p.x, p.y, active ? (clustering ? 3 : 2) : 1, 0, Math.PI * 2);
+            ctx.arc(p.x, p.y, active ? (clustering ? 3 : 2.3) : 1.65, 0, Math.PI * 2);
             ctx.fill();
 
-            // Draw Clustering Lines (Entanglement)
-            if (clustering) {
-                particles.forEach(part => {
-                    if (part.mass > 5) {
-                        const dx = p.x - part.x;
-                        const dy = p.y - part.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 100) {
-                            ctx.beginPath();
-                            ctx.moveTo(p.x, p.y);
-                            ctx.lineTo(part.x, part.y);
-                            ctx.strokeStyle = `rgba(255, 107, 107, ${0.3 * (1 - dist / 100)})`;
-                            ctx.lineWidth = 1;
-                            ctx.stroke();
-                        }
-                    }
-                });
-            }
+            // Colored regions mark an illustrative coupling category; no physical tether is drawn.
         });
 
         // Draw Particles
@@ -3834,13 +3669,13 @@ function renderHiggs() {
             ctx.shadowBlur = 0;
         });
 
-        animationFrameId = requestAnimationFrame(animate);
+        animationFrameId = safeRequestAnimationFrame(animate);
     }
 
     // Use ResizeObserver
-    const observer = new ResizeObserver(() => {
+    const observer = registerViewObserver(new ResizeObserver(() => {
         resize();
-    });
+    }));
     observer.observe(stage);
 
     // Initial resize
@@ -3904,7 +3739,7 @@ function renderGravityV2() {
     // 1. Geometry (Top Left)
     const geo = createGravityCard('gravity-geometry',
         '几何的主宰 (Geometry)',
-        '物质告诉时空如何弯曲。<br><span style="font-family: serif; font-style: italic; color: #a78bfa;">G<sub>μν</sub> = 8πT<sub>μν</sub></span>',
+        '物质告诉时空如何弯曲。<br><span style="font-family: serif; font-style: italic; color: #a78bfa;">G<sub>μν</sub> + Λg<sub>μν</sub> = (8πG/c⁴)T<sub>μν</sub></span>',
         '<div class="singularity-warning">⚠ SINGULARITY WARNING</div>'
     );
     grid.appendChild(geo.card);
@@ -3919,7 +3754,7 @@ function renderGravityV2() {
     // 3. Entropy (Bottom)
     const entropy = createGravityCard('gravity-entropy',
         '引力的幻觉 (Entropic Gravity)',
-        '时空不是背景，而是信息的涌现。<br><span style="color: #34d399; font-family: monospace;">Discrete Bits &rarr; Smooth Geometry</span>'
+        '时空不是背景，而是信息的涌现。<small style="display:block;color:#91a8c6;font-size:11px;">一种尚未证实的理论设想</small><span style="color: #34d399; font-family: monospace;">Discrete Bits &rarr; Smooth Geometry</span>'
     );
     grid.appendChild(entropy.card);
 
@@ -4230,9 +4065,9 @@ function renderGravityV2() {
             }
         }
 
-        animationFrameId = requestAnimationFrame(animate);
+        animationFrameId = safeRequestAnimationFrame(animate);
     }
-    animationFrameId = requestAnimationFrame(animate);
+    animationFrameId = safeRequestAnimationFrame(animate);
 }
 
 // --- Renamed Views ---
@@ -4267,7 +4102,7 @@ function renderEM() {
     </div>
     <div class="em-subtitle-capsule">
         <span style="color: #fbbf24; font-weight: bold; margin-right: 8px;">SCOPE:</span>
-        你能<strong>看到</strong>、<strong>摸到</strong>、<strong>听到</strong>的一切，几乎都由电磁力主宰。
+        你能<strong>看到</strong>、<strong>触摸</strong>、<strong>体验</strong>的世界，处处都有电磁相互作用。
     </div>
 `;
     stage.appendChild(titleSection);
@@ -4352,7 +4187,7 @@ function renderEM() {
             <div class="repulsion-layer repulsion-bottom"></div>
         </div>`,
         '日常作用力',
-        '你感受到的支持力、摩擦力，本质上都是<strong>原子外层电子云之间的静电排斥</strong>。你从未真正“接触”过任何物体。'
+        '你感受到的支持力、摩擦力，归根到底离不开<strong>原子间的电磁相互作用</strong>。你从未真正“接触”过任何物体。'
     );
 
     // Card 3: Light (Prism)
@@ -4363,7 +4198,7 @@ function renderEM() {
             <div class="prism-rainbow"></div>
         </div>`,
         '光与信息',
-        '光是电磁波。色彩、WiFi信号、甚至神经元传递的思维，本质都是<strong>电磁场的变化</strong>。'
+        '光是电磁波。色彩、Wi‑Fi 信号，都是电磁场传递信息的不同方式。'
     );
 
     columnsContainer.appendChild(col1);
@@ -4441,7 +4276,7 @@ function renderEM() {
             }
 
         } else if (currentEMMode === 'repulsion') {
-            animLabel.innerHTML = '你从未真正触碰过任何物体，是电子在排斥 (Electrostatic Repulsion)';
+            animLabel.innerHTML = '你从未真正“接触”过任何物体 —— 电子云在接近时相互排斥（概念示意）';
 
             // Repulsion: Vertical Compression & Bounce
             const loopTime = 200;
@@ -4509,7 +4344,7 @@ function renderEM() {
             }
 
         } else if (currentEMMode === 'light') {
-            animLabel.innerHTML = '电子颤动，光芒诞生 (Electron Vibration Creates Light)';
+            animLabel.innerHTML = '光芒诞生，电磁波将能量和信息带向远方';
 
             // Light: Electron Transition & Organic Ripples
             const loopTime = 180;
@@ -4558,7 +4393,7 @@ function renderEM() {
             }
         }
 
-        requestAnimationFrame(animateEMStage);
+        safeRequestAnimationFrame(animateEMStage);
     }
     animateEMStage();
 }
@@ -4693,7 +4528,7 @@ function renderSymmetry() {
     };
 
     const breakText = document.createElement('span');
-    breakText.textContent = '⚠️ 破坏对称性';
+    breakText.textContent = '⚠️ 引入外界因素';
     breakText.style.cssText = 'color: #ef4444; font-size: 0.9rem; font-weight: 600;';
 
     breakLabel.appendChild(breakCheckbox);
@@ -4701,7 +4536,7 @@ function renderSymmetry() {
     breakToggleContainer.appendChild(breakLabel);
 
     const breakHint = document.createElement('p');
-    breakHint.textContent = noetherCurrentSym === 0 ? '力场随位置变化' : (noetherCurrentSym === 1 ? '空间不均匀' : '物理定律随时间变化');
+    breakHint.textContent = noetherCurrentSym === 0 ? '给两球系统施加外力' : (noetherCurrentSym === 1 ? '外力矩驱动轨道' : '外界调制重力场 g(t)');
     breakHint.style.cssText = 'margin: 0.5rem 0 0 0; font-size: 0.75rem; opacity: 0.7; color: #fca5a5;';
     breakToggleContainer.appendChild(breakHint);
 
@@ -4761,7 +4596,7 @@ function renderSymmetry() {
 `;
 
     const sceneTitle = document.createElement('p');
-    sceneTitle.textContent = noetherSymmetryBroken ? `⚠️ 对称性已破坏！` : `在任何${currentSym.control}做实验，结果都一样`;
+    sceneTitle.textContent = noetherSymmetryBroken ? `⚠️ 加入外界影响：所选系统不再满足该对称性` : `改变${currentSym.control}不改变完整系统的规律（示意）`;
     sceneTitle.style.cssText = `margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.8; color: ${noetherSymmetryBroken ? '#ef4444' : '#fff'};`;
     // Move title positioning to avoid overlap with law indicator
     scenePanel.appendChild(sceneTitle);
@@ -4788,11 +4623,11 @@ function renderSymmetry() {
 
     let lawText = '';
     if (noetherCurrentSym === 0) {
-        lawText = noetherSymmetryBroken ? 'F(x) 变化 ⚠️' : 'F = 常数 🔒';
+        lawText = noetherSymmetryBroken ? '外力随位置改变 ⚠️' : '空间平移不变 🔒';
     } else if (noetherCurrentSym === 1) {
-        lawText = noetherSymmetryBroken ? 'V(θ) 不对称 ⚠️' : 'V(θ) 各向同性 🔒';
+        lawText = noetherSymmetryBroken ? '外力矩介入 ⚠️' : '旋转对称 🔒';
     } else {
-        lawText = noetherSymmetryBroken ? 'g(t) 变化 ⚠️' : 'g = 9.8 m/s² 🔒';
+        lawText = noetherSymmetryBroken ? 'g(t) 随时间变 ⚠️' : 'g = 9.81 m/s² 🔒';
     }
     lawIndicator.textContent = lawText;
     scenePanel.style.position = 'relative';
@@ -4837,12 +4672,12 @@ function renderSymmetry() {
 
     const conserveTitle = document.createElement('h3');
     conserveTitle.style.cssText = `color: ${noetherSymmetryBroken ? '#ef4444' : currentSym.conservationColor}; margin: 0 0 0.5rem 0; font-size: 1.2rem;`;
-    conserveTitle.textContent = `${currentSym.conservation}守恒`;
+    conserveTitle.textContent = noetherSymmetryBroken ? `${currentSym.conservation}（子系统开放）` : `${currentSym.conservation}守恒`;
     infinityContainer.appendChild(conserveTitle);
 
     const conserveDesc = document.createElement('p');
     conserveDesc.style.cssText = 'font-size: 0.85rem; opacity: 0.7; margin: 0;';
-    conserveDesc.textContent = noetherSymmetryBroken ? '守恒律被破坏!' : '对称性确保守恒';
+    conserveDesc.textContent = noetherSymmetryBroken ? '所选子系统可能与外界交换相应守恒量' : '作用量的连续对称性对应守恒量';
     infinityContainer.appendChild(conserveDesc);
 
     conservationPanel.appendChild(infinityContainer);
@@ -4877,29 +4712,29 @@ function renderSymmetry() {
 
     // δS = 0 label with glow effect
     const deltaS = document.createElement('div');
-    deltaS.innerHTML = '<i>δS</i> = 0';
+    deltaS.innerHTML = '<i>δS</i> = 0（作用量驻值，两种情形均适用）';
     deltaS.style.cssText = `
     font-size: 0.75rem;
-    color: ${noetherSymmetryBroken ? '#ef4444' : '#fbbf24'};
+    color: #fbbf24;
     background: rgba(0, 0, 0, 0.3);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    border: 1px solid ${noetherSymmetryBroken ? '#ef444440' : '#fbbf2440'};
+    border: 1px solid #fbbf2440;
     font-weight: 500;
-    box-shadow: 0 0 10px ${noetherSymmetryBroken ? '#ef444440' : '#fbbf2440'};
+    box-shadow: 0 0 10px #fbbf2440;
 `;
 
     // Explanation text (three-part pedagogical logic)
     const explanation = document.createElement('div');
     let explanationText = '';
     if (noetherCurrentSym === 0) {
-        explanationText = '空间均匀 → 无势能梯度 → 动量守恒';
+        explanationText = '完整系统空间平移对称 → 总动量守恒';
     } else if (noetherCurrentSym === 1) {
-        explanationText = '各向同性 → 无扭矩 → 角动量守恒';
+        explanationText = '完整系统旋转对称 → 总角动量守恒';
     } else {
-        explanationText = '时间均匀 → 无额外成本 → 能量守恒';
+        explanationText = '完整系统时间平移对称 → 能量守恒';
     }
-    explanation.textContent = explanationText;
+    explanation.textContent = noetherSymmetryBroken ? '所选子系统受外界作用；完整闭合系统的守恒律需计入外界' : explanationText;
     explanation.style.cssText = `
     font-size: 0.65rem;
     color: rgba(255, 255, 255, 0.6);
@@ -4916,6 +4751,10 @@ function renderSymmetry() {
     mainContainer.appendChild(conservationPanel);
     machineContainer.appendChild(mainContainer);
     stage.appendChild(machineContainer);
+    const scienceBoundary=document.createElement('p');
+    scienceBoundary.style.cssText='max-width:1100px;padding:8px 14px;margin:12px 0 0;border:1px solid rgba(167,139,250,.25);border-radius:8px;color:#cbd5e1;font-size:.82rem;line-height:1.65;';
+    scienceBoundary.innerHTML='<b>模型与定理的界线：</b>δS=0 表示实际运动满足作用量驻值条件；诺特定理另外要求作用量在某连续变换下对称。两球假设等质量且忽略耗散，动量表用模型单位；行星为理想牛顿二体椭圆；单摆取 m=1 kg、L=1 m、不计阻力。开启外界作用时，图中变化的是所选子系统量，不是宣布自然界基本守恒律失效。';
+    stage.appendChild(scienceBoundary);
 
     // Add pulse-border animation CSS
     if (!document.getElementById('noether-animations')) {
@@ -4996,89 +4835,42 @@ function renderSymmetry() {
         infCtx.shadowBlur = 0;
     }
 
-    // ========== ENERGY BARS (for Time Translation) ==========
-    // Fixed rectangle: Ek (blue) from bottom + Ep (green) from top = always fills completely
-    function drawEnergyBars(container, Ek, Ep, totalHeight, color, broken) {
-        container.innerHTML = '';
-
-        const wrapper = document.createElement('div');
-        wrapper.style.cssText = 'display: flex; flex-direction: column; align-items: center; gap: 0.3rem;';
-
-        // Fixed height container (the "thermometer")
-        const barContainer = document.createElement('div');
-        barContainer.style.cssText = `
-            width: 50px; 
-            height: ${totalHeight}px; 
-            border: 2px solid ${broken ? '#ef4444' : color};
-            border-radius: 6px;
-            overflow: hidden;
-            position: relative;
-            background: transparent;
-        `;
-
-        // Normalize: Ek + Ep must equal totalHeight (no gaps!)
-        const ekNorm = Math.max(0, Math.min(totalHeight, Ek));
-        const epNorm = totalHeight - ekNorm; // Ep fills the rest - NO GAP!
-
-        // Ek (kinetic - BLUE, from BOTTOM, grows upward)
-        const ekBar = document.createElement('div');
-        ekBar.style.cssText = `
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: ${ekNorm}px; 
-            background: linear-gradient(to top, #3b82f6, #60a5fa);
-            transition: height 0.05s ease-out;
-        `;
-        barContainer.appendChild(ekBar);
-
-        // Ep (potential - GREEN, from TOP, fills the remaining space)
-        const epBar = document.createElement('div');
-        epBar.style.cssText = `
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: ${epNorm}px; 
-            background: linear-gradient(to bottom, #22c55e, #4ade80);
-            transition: height 0.05s ease-out;
-        `;
-        barContainer.appendChild(epBar);
-
-        wrapper.appendChild(barContainer);
-
-        // Labels on both sides
-        const labelsRow = document.createElement('div');
-        labelsRow.style.cssText = 'display: flex; gap: 0.8rem; font-size: 0.65rem;';
-
-        const epLabel = document.createElement('span');
-        epLabel.innerHTML = `<span style="color:#4ade80">Eₚ</span>=${Math.round(epNorm)}`;
-        epLabel.style.color = '#fff';
-
-        const ekLabel = document.createElement('span');
-        ekLabel.innerHTML = `<span style="color:#60a5fa">Eₖ</span>=${Math.round(ekNorm)}`;
-        ekLabel.style.color = '#fff';
-
-        labelsRow.appendChild(epLabel);
-        labelsRow.appendChild(ekLabel);
-        wrapper.appendChild(labelsRow);
-
-        // Total energy display
-        const totalDisplay = document.createElement('div');
-        totalDisplay.style.cssText = `
-            font-size: 0.75rem; 
-            font-weight: bold;
-            color: ${broken ? '#ef4444' : color};
-            ${broken ? 'animation: flicker 0.15s infinite;' : ''}
-        `;
-        totalDisplay.textContent = broken ? `E = ${Math.round(Ek + Ep)} (变!)` : `E = ${totalHeight} ✓`;
-        wrapper.appendChild(totalDisplay);
-
-        container.appendChild(wrapper);
+    // ========== REAL ENERGY BARS: m=1 kg, L=1 m, g(t) m/s² ==========
+    // The two segments are drawn from independently computed energies. No forced complement.
+    function drawEnergyBars(container, Ek, Ep, color, broken) {
+        const total = Ek + Ep;
+        // Fixed common scale leaves visible headroom; never forces Ek+Ep to fill the bar.
+        const barHeight = 105;
+        const scaleJ = 2.5;
+        const epPx = Math.max(0, Math.min(barHeight, Ep / scaleJ * barHeight));
+        const ekPx = Math.max(0, Math.min(barHeight, Ek / scaleJ * barHeight));
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:0.3rem;';
+        const bar = document.createElement('div');
+        bar.style.cssText = `width:50px;height:${barHeight}px;border:2px solid ${broken ? '#ef4444' : color};border-radius:6px;position:relative;background:#111827;overflow:hidden;`;
+        const kin = document.createElement('div');
+        kin.style.cssText = `position:absolute;bottom:0;left:0;right:0;height:${ekPx}px;background:#3b82f6`;
+        const pot = document.createElement('div');
+        pot.style.cssText = `position:absolute;bottom:${ekPx}px;left:0;right:0;height:${epPx}px;background:#22c55e`;
+        bar.append(kin,pot); wrap.appendChild(bar);
+        const values = document.createElement('div');
+        values.style.cssText = 'font-size:0.67rem;text-align:center;line-height:1.6;';
+        values.innerHTML = `<span style="color:#60a5fa">Eₖ=${Ek.toFixed(3)} J</span><br><span style="color:#4ade80">Eₚ=${Ep.toFixed(3)} J</span>`;
+        wrap.appendChild(values);
+        const totalLabel = document.createElement('div');
+        totalLabel.style.cssText=`font-size:.78rem;font-weight:700;color:${broken ? '#fca5a5' : color}`;
+        totalLabel.textContent = `E(摆)=${total.toFixed(3)} J`;
+        wrap.appendChild(totalLabel);
+        const caveat = document.createElement('small');
+        caveat.style.cssText='font-size:.58rem;text-align:center;max-width:145px;color:#94a3b8';
+        caveat.textContent=broken?'g(t) 由外界驱动，摆的机械能可变化':'数值积分存在很小的计算误差';
+        wrap.appendChild(caveat);
+        container.replaceChildren(wrap);
     }
 
-    // ========== SPEEDOMETER (for Space Translation - Momentum) ==========
+
+
+        // ========== SPEEDOMETER (for Space Translation - Momentum) ==========
     function drawSpeedometer(container, v1, v2, color, broken) {
         container.innerHTML = '';
 
@@ -5123,10 +4915,10 @@ function renderSymmetry() {
         let pointerAngle;
         if (broken) {
             // Jittering pointer when broken
-            pointerAngle = Math.PI / 2 + (totalP / 100) * (Math.PI / 2) + Math.sin(Date.now() / 50) * 0.3;
+            pointerAngle = Math.PI / 2 + Math.max(-1,Math.min(1,totalP / 100)) * (Math.PI / 2);
         } else {
             // Locked at center when conserved
-            pointerAngle = Math.PI / 2;
+            pointerAngle = Math.PI / 2 + Math.max(-1,Math.min(1,totalP / 100)) * (Math.PI / 2);
         }
 
         // Draw pointer
@@ -5149,65 +4941,58 @@ function renderSymmetry() {
         // Label
         const label = document.createElement('div');
         label.innerHTML = broken ?
-            '<span style="color:#ef4444">Σp ≠ 0</span> 动量不守恒!' :
-            '<span style="color:#fbbf24">Σp = 0</span> 动量守恒';
+            `<span style="color:#ef4444">两球Σp=${totalP.toFixed(1)}</span> (外力影响)` :
+            `<span style="color:#fbbf24">两球Σp=${totalP.toFixed(1)}</span> (中心动量系)`;
         label.style.cssText = 'font-size: 0.7rem; text-align: center; margin-top: 0.3rem;';
         wrapper.appendChild(label);
 
         container.appendChild(wrapper);
     }
 
-    // ========== SWEPT AREA (for Rotation - Kepler's 2nd Law) ==========
-    function drawSweptArea(container, planetAngle, color, broken) {
-        container.innerHTML = '';
-
-        const sweptCanvas = document.createElement('canvas');
-        sweptCanvas.width = 100;
-        sweptCanvas.height = 100;
-        sweptCanvas.style.cssText = 'margin-top: 0.5rem;';
-        container.appendChild(sweptCanvas);
-
-        const ctx = sweptCanvas.getContext('2d');
-        const cx = 50, cy = 50;
-
-        // Draw orbit (ellipse)
-        ctx.strokeStyle = 'rgba(255,255,255,0.2)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.ellipse(cx + 10, cy, 35, 25, 0, 0, Math.PI * 2);
+    // ========== SWEPT AREA; SOLVE KEPLER EQUATION FOR THE CONSERVATIVE CASE ==========
+    // Bound Newtonian 2-body orbit: M=E-e sin E; focus at origin; swept area rate n*a*b/2.
+    function keplerPoint(time,a=100,e=0.6,n=0.65) {
+        const M = n*time;
+        let E=M;
+        for(let i=0;i<8;i++) E -= (E-e*Math.sin(E)-M)/(1-e*Math.cos(E));
+        const b=a*Math.sqrt(1-e*e);
+        return {x:a*(Math.cos(E)-e),y:b*Math.sin(E),a,b,e,E};
+    }
+    function externallyTorquedPosition(time,r=90) {
+        // Imposed angular motion => external tangential force/torque; an illustrative driven path.
+        const angle = 0.65*time+0.2*Math.sin(0.8*time);
+        return {x:r*Math.cos(angle),y:r*Math.sin(angle),angle};
+    }
+    function drawSweptArea(container, time, color, broken) {
+        const cvs=document.createElement('canvas'); cvs.width=120;cvs.height=112;
+        const ctx=cvs.getContext('2d');
+        const cx=70,cy=55,a=43,e=0.6,b=a*Math.sqrt(1-e*e),n=0.65;
+        ctx.strokeStyle='rgba(255,255,255,.3)';ctx.beginPath();
+        if(broken) ctx.arc(cx,cy,39,0,Math.PI*2);
+        else ctx.ellipse(cx-a*e,cy,a,b,0,0,Math.PI*2);
         ctx.stroke();
-
-        // Draw sun at focus
-        ctx.fillStyle = color;
-        ctx.beginPath();
-        ctx.arc(cx, cy, 5, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Draw swept sector (shows equal area in equal time)
-        const sectorAngle = Math.PI / 6; // 30 degree sweep
-        ctx.fillStyle = broken ? 'rgba(239, 68, 68, 0.3)' : `${color}40`;
-        ctx.beginPath();
-        ctx.moveTo(cx, cy);
-        ctx.arc(cx, cy, 35, planetAngle - sectorAngle, planetAngle, false);
-        ctx.closePath();
-        ctx.fill();
-
-        // Draw planet
-        const px = cx + 10 + Math.cos(planetAngle) * 35;
-        const py = cy + Math.sin(planetAngle) * 25;
-        ctx.fillStyle = broken ? '#ef4444' : '#a78bfa';
-        ctx.beginPath();
-        ctx.arc(px, py, 4, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Label
-        const label = document.createElement('div');
-        label.textContent = broken ? '面积不等!' : 'dA/dt = 常数';
-        label.style.cssText = `font-size: 0.7rem; color: ${broken ? '#ef4444' : color}; text-align: center; margin-top: 0.3rem;`;
-        container.appendChild(label);
+        const period=0.50;
+        ctx.fillStyle=broken?'rgba(239,68,68,.33)':'rgba(251,191,36,.28)';
+        ctx.beginPath();ctx.moveTo(cx,cy);
+        for(let k=0;k<=30;k++){
+            const t=time-period+k*period/30;
+            const p=broken?externallyTorquedPosition(t,39):keplerPoint(t,a,e,n);
+            ctx.lineTo(cx+p.x,cy+p.y);
+        }
+        ctx.closePath();ctx.fill();
+        const pos=broken?externallyTorquedPosition(time,39):keplerPoint(time,a,e,n);
+        ctx.fillStyle='#fbbf24';ctx.beginPath();ctx.arc(cx,cy,4,0,Math.PI*2);ctx.fill();
+        ctx.fillStyle=broken?'#ef4444':'#a78bfa';ctx.beginPath();ctx.arc(cx+pos.x,cy+pos.y,4,0,Math.PI*2);ctx.fill();
+        const label=document.createElement('div');
+        label.style.cssText=`font-size:.64rem;color:${broken?'#fca5a5':color};text-align:center;max-width:160px`;
+        label.textContent=broken?'外力矩驱动：等时面积会变化':`Δt=${period.toFixed(2)}, ΔA=${(a*b*n/2*period).toFixed(1)} px²`;
+        container.replaceChildren(cvs,label);
     }
 
-    // Animation logic
+
+
+        // Animation logic; velocity Verlet integrates angular acceleration = -(g(t)/L)sin(theta).
+    const pend={theta:0.50,omega:0,time:0};
     let animT = 0;
     function animate() {
         if (currentView !== 'symmetry') return;
@@ -5271,60 +5056,40 @@ function renderSymmetry() {
             const period = 3;
             const phase = (animT % period) / period; // 0 to 1
 
-            let p1x, p2x, v1 = 0, v2 = 0;
-            // Simple elastic collision logic
-            if (phase < 0.4) {
-                // Approaching
-                const t = phase / 0.4;
-                p1x = -80 + t * 80; // -80 to 0
-                p2x = 80 - t * 80;  // 80 to 0
-                v1 = 50; v2 = -50; // Moving toward each other
-            } else if (phase < 0.6) {
-                // Impact
-                p1x = 0;
-                p2x = 0;
-                v1 = 0; v2 = 0;
-            } else {
-                // Departing
-                const t = (phase - 0.6) / 0.4;
-                p1x = -t * 80;      // 0 to -80
-                p2x = t * 80;       // 0 to 80
-                v1 = -50; v2 = 50; // Moving apart
-
-                // Broken symmetry - forces vary with position (but position is now fixed!)
-                if (noetherSymmetryBroken) {
-                    // In broken case, external force pushes both pucks in same direction
-                    const driftFactor = Math.sin(animT) * 20;
-                    p1x += t * driftFactor;
-                    p2x += t * driftFactor;
-                    v1 += driftFactor; v2 += driftFactor; // Momentum not conserved!
-                }
+            // Equal-mass, head-on, instantaneous elastic collision (COM frame).
+            // Fixed 3-second loop; at phase=0.5 the two balls touch at screen separation 24 px.
+            const approach=phase<0.5;
+            const r=approach?(-80+160*phase):(80-160*phase);
+            let p1x=r,p2x=-r;
+            let v1=approach?160/period:-160/period;
+            let v2=-v1;
+            if(noetherSymmetryBroken) {
+                // Apply equal external translation force; momentum of TWO-PUCK SUBSYSTEM varies.
+                const ext=12*Math.sin(animT);
+                p1x+=ext;p2x+=ext;
+                v1+=12*Math.cos(animT);v2+=12*Math.cos(animT);
             }
 
-            // ========== STROBOSCOPIC TRAILS ==========
+
+                // ========== STROBOSCOPIC TRAILS ==========
             // Draw past positions as fading dots
             const trailCount = 5;
             for (let i = trailCount; i >= 1; i--) {
                 const trailPhase = ((animT - i * 0.08) % period) / period;
                 let trail1x, trail2x;
 
-                if (trailPhase < 0.4) {
-                    trail1x = -80 + (trailPhase / 0.4) * 80;
-                    trail2x = 80 - (trailPhase / 0.4) * 80;
-                } else if (trailPhase < 0.6) {
-                    trail1x = 0; trail2x = 0;
-                } else {
-                    const dt = (trailPhase - 0.6) / 0.4;
-                    trail1x = -dt * 80;
-                    trail2x = dt * 80;
-                    if (noetherSymmetryBroken) {
-                        const drift = Math.sin(animT - i * 0.08) * 20;
-                        trail1x += dt * drift;
-                        trail2x += dt * drift;
-                    }
+                const prevTime=animT-i*0.08;
+                const prevPhase=((prevTime%period)+period)%period/period;
+                const approachPrev=prevPhase<0.5;
+                trail1x=approachPrev?(-80+160*prevPhase):(80-160*prevPhase);
+                trail2x=-trail1x;
+                if(noetherSymmetryBroken){
+                    const drift=12*Math.sin(prevTime);
+                    trail1x+=drift;trail2x+=drift;
                 }
 
-                const alpha = (1 - i / trailCount) * 0.4;
+
+                    const alpha = (1 - i / trailCount) * 0.4;
                 // Trail for puck 1
                 ctx.fillStyle = `rgba(129, 140, 248, ${alpha})`;
                 ctx.beginPath();
@@ -5351,7 +5116,7 @@ function renderSymmetry() {
             ctx.fill();
 
             // Impact Flash
-            if (phase >= 0.4 && phase < 0.6) {
+            if (Math.abs(phase - 0.5) < 0.012) {
                 ctx.fillStyle = `rgba(255, 255, 255, ${Math.random()})`;
                 ctx.beginPath();
                 ctx.arc(centerX, tableY - 12, 15, 0, Math.PI * 2);
@@ -5362,7 +5127,7 @@ function renderSymmetry() {
             ctx.fillStyle = '#fff';
             ctx.font = '14px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText(noetherSymmetryBroken ? '力场不均匀，动量不守恒' : '坐标系移动，但碰撞规律不变', 225, 265);
+            ctx.fillText(noetherSymmetryBroken ? '外力作用：仅两球系统的总动量可变' : '理想弹性碰撞：两球总动量保持为零', 225, 265);
 
             // Indicator: Speedometer (momentum visualization)
             drawSpeedometer(indicatorContainer, v1, v2, currentSym.conservationColor, noetherSymmetryBroken);
@@ -5440,38 +5205,18 @@ function renderSymmetry() {
 
             ctx.rotate(rotationAngle); // The physics frame rotates
 
-            // Orbit Path (changes when broken)
-            ctx.strokeStyle = noetherSymmetryBroken ? 'rgba(239, 68, 68, 0.3)' : 'rgba(251, 191, 36, 0.3)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            if (noetherSymmetryBroken) {
-                // Asymmetric potential - spiraling orbit
-                for (let t = 0; t < Math.PI * 2; t += 0.1) {
-                    const r = 80 + Math.sin(t * 3) * 20;
-                    const x = Math.cos(t) * r;
-                    const y = Math.sin(t) * r * 0.6;
-                    if (t === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
-                }
-            } else {
-                ctx.ellipse(0, 0, 100, 60, 0, 0, Math.PI * 2);
-            }
+            // Conserved case: Kepler focus-centered ellipse; equal area in equal time.
+            // Broken case: imposed circular motion with non-uniform angular speed (external torque).
+            ctx.strokeStyle=noetherSymmetryBroken?'rgba(239,68,68,.4)':'rgba(251,191,36,.35)';
+            ctx.lineWidth=2;ctx.beginPath();
+            if(noetherSymmetryBroken)ctx.arc(0,0,90,0,Math.PI*2);
+            else ctx.ellipse(-60,0,100,80,0,0,Math.PI*2);
             ctx.stroke();
+            const planet=noetherSymmetryBroken?externallyTorquedPosition(animT):keplerPoint(animT);
+            const px=planet.x,py=planet.y;
 
-            // Planet
-            const orbitSpeed = noetherSymmetryBroken ? 1.5 * (1 + Math.sin(animT * 0.5) * 0.3) : 1.5;
-            const planetAngle = animT * orbitSpeed;
-            let px, py;
-            if (noetherSymmetryBroken) {
-                const r = 80 + Math.sin(planetAngle * 3) * 20;
-                px = Math.cos(planetAngle) * r;
-                py = Math.sin(planetAngle) * r * 0.6;
-            } else {
-                px = Math.cos(planetAngle) * 100;
-                py = Math.sin(planetAngle) * 60;
-            }
 
-            ctx.fillStyle = noetherSymmetryBroken ? '#ef4444' : '#a78bfa';
+                ctx.fillStyle = noetherSymmetryBroken ? '#ef4444' : '#a78bfa';
             ctx.beginPath();
             ctx.arc(px, py, 10, 0, Math.PI * 2);
             ctx.fill();
@@ -5493,10 +5238,10 @@ function renderSymmetry() {
             ctx.fillStyle = '#fff';
             ctx.font = '14px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText(noetherSymmetryBroken ? '空间不对称，角动量不守恒' : '坐标系旋转，轨道形状不变', 225, 260);
+            ctx.fillText(noetherSymmetryBroken ? '外加力矩：所选轨道角动量随时间变化' : '焦点在恒星：相等时间扫过相等面积', 225, 260);
 
             // Indicator: Swept Area (Kepler's 2nd Law - Angular Momentum)
-            drawSweptArea(indicatorContainer, planetAngle, currentSym.conservationColor, noetherSymmetryBroken);
+            drawSweptArea(indicatorContainer, animT, currentSym.conservationColor, noetherSymmetryBroken);
 
         } else {
             // Time Translation: "The Eternal Pendulum"
@@ -5551,7 +5296,7 @@ function renderSymmetry() {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
             ctx.font = '8px monospace';
             ctx.textAlign = 'left';
-            ctx.fillText('⏱ ATOMIC CLOCK', 338, 24);
+            ctx.fillText('⏱ SIMULATED CLOCK', 338, 24);
 
             // Clock time display (ANIMATED!)
             ctx.fillStyle = noetherSymmetryBroken ? '#ef4444' : '#4ade80';
@@ -5561,25 +5306,21 @@ function renderSymmetry() {
             ctx.fillText(`T=${clockDisplay}`, 338, 47);
             ctx.shadowBlur = 0;
 
-            // Pendulum Physics (Invariant, unless broken)
-            let swingAmp = 0.5;
-            let totalEnergy = 80; // constant when not broken
-            if (noetherSymmetryBroken) {
-                // Time-varying gravity causes chaotic amplitude changes
-                swingAmp = 0.5 + Math.sin(animT * 0.7) * 0.4;
-                totalEnergy = 80 + Math.sin(animT * 2) * 30; // Energy fluctuates!
-            }
-            const swingAngle = Math.sin(animT * 2) * swingAmp;
-            const bobX = centerX + Math.sin(swingAngle) * stringLen;
-            const bobY = 80 + Math.cos(swingAngle) * stringLen;
+            // Reproducible numerical model: 1 kg point mass, 1 m arm, no damping.
+            // A driven g(t) exchanges energy with external source; full-system energy is not claimed to fail.
+            const L=1,m=1,dt=0.020;
+            const gOfTime=(t)=>9.81*(noetherSymmetryBroken?1+0.25*Math.sin(0.70*t):1);
+            const halfOmega=pend.omega-0.5*dt*gOfTime(pend.time)/L*Math.sin(pend.theta);
+            pend.theta+=halfOmega*dt;pend.time+=dt;
+            pend.omega=halfOmega-0.5*dt*gOfTime(pend.time)/L*Math.sin(pend.theta);
+            const swingAngle=pend.theta;
+            const bobX=centerX+Math.sin(swingAngle)*stringLen;
+            const bobY=80+Math.cos(swingAngle)*stringLen;
+            const Ek=0.5*m*L*L*pend.omega*pend.omega;
+            const Ep=m*gOfTime(pend.time)*L*(1-Math.cos(swingAngle));
 
-            // Calculate Ek and Ep from pendulum position
-            const velocity = Math.cos(animT * 2) * swingAmp * 2; // Angular velocity
-            const height = 1 - Math.cos(swingAngle); // Height from lowest point
-            const Ek = Math.abs(velocity) * 40; // Kinetic energy (scaled)
-            const Ep = height * 80; // Potential energy (scaled)
 
-            // Pivot point
+                // Pivot point
             ctx.fillStyle = '#ddd';
             ctx.beginPath();
             ctx.arc(centerX, 80, 6, 0, Math.PI * 2);
@@ -5606,10 +5347,10 @@ function renderSymmetry() {
             ctx.fillStyle = '#fff';
             ctx.font = '14px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText(noetherSymmetryBroken ? 'g(t) 变化，能量不守恒' : '无论何时做实验，摆动规律相同', 225, 265);
+            ctx.fillText(noetherSymmetryBroken ? '外界调制 g(t)，摆的机械能发生交换' : '恒定 g：Eₖ＋Eₚ 近似保持不变', 225, 265);
 
             // Indicator: Energy Bars (Ek + Ep)
-            drawEnergyBars(indicatorContainer, Ek, Ep, noetherSymmetryBroken ? totalEnergy : 80, currentSym.conservationColor, noetherSymmetryBroken);
+            drawEnergyBars(indicatorContainer, Ek, Ep, currentSym.conservationColor, noetherSymmetryBroken);
         }
 
         safeRequestAnimationFrame(animate);
@@ -5864,17 +5605,9 @@ function updateLiquidGauge(container, time, color, broken = false) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Initializing Standard Model Visualization...");
 
-    // Initialize Canvas & Particles
-    resize();
-    initParticles();
-    animate();
-
-    // Initialize View
-    // Default to Home View
+    // Background animation started once at file load.
+    // Home view is scheduled exactly once (prevents orphaned canvas loops).
     switchView('home');
-
-    // Ensure Home View renders even if switchView doesn't trigger it due to some race condition
-    renderHomeTriangle();
 
     console.log("Initialization Complete.");
 });
@@ -5915,10 +5648,10 @@ function renderSymmetryBreaking() {
     const s1Header = document.createElement('div');
     s1Header.innerHTML = `
     <h3 style="color: #fff; border-left: 4px solid #2dd4bf; padding-left: 1rem; margin-bottom: 1rem;">
-        1. 镜中世界崩塌 (The Broken Mirror)
+        1. 吴健雄实验：弱相互作用的宇称破坏
     </h3>
     <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6;">
-        1956年，吴健雄的实验震惊了物理学界：在<strong style="color: #2dd4bf; font-weight: 900;">弱相互作用</strong>下，物理定律不再<strong style="color: #2dd4bf; font-weight: 900;">左右对称</strong>。
+        1956 年末开展、1957 年发表的吴健雄团队实验表明：在<strong style="color: #2dd4bf; font-weight: 900;">弱相互作用</strong>下，物理定律不再<strong style="color: #2dd4bf; font-weight: 900;">左右对称</strong>。
     </p>
 `;
     section1.appendChild(s1Header);
@@ -5976,7 +5709,7 @@ function renderSymmetryBreaking() {
 
     // Quote
     const quote = document.createElement('div');
-    quote.innerHTML = '“上帝是左撇子。在弱相互作用的底层代码中，镜像世界并不存在。”';
+    quote.innerHTML = '“弱相互作用可以区分左右手性。”（科普比喻，非原始论文引语）';
     quote.style.cssText = 'margin-top: 1rem; font-style: italic; color: rgba(255,255,255,0.5); font-size: 0.85rem; text-align: center;';
     experimentContainer.appendChild(quote);
 
@@ -6025,8 +5758,8 @@ function renderSymmetryBreaking() {
 
     const symmetries = [
         { id: 'P', label: '宇称 (P)', icon: '🪞', desc: '空间反演不对称', detail: '镜中物理定律不同' },
-        { id: 'C', label: '电荷 (C)', icon: '⚡', desc: '正反物质不对称', detail: '反物质消失之谜' },
-        { id: 'T', label: '时间 (T)', icon: '⏳', desc: '时间反演不对称', detail: '时间有方向性' }
+        { id: 'C', label: '电荷共轭 (C)', icon: '⚡', desc: '粒子↔反粒子；弱过程可破坏 C 对称性', detail: '不能单靠 C 破坏解释宇宙反物质稀少' },
+        { id: 'T', label: '时间反演 (T)', icon: '⏳', desc: '某些微观弱过程存在 T 破坏', detail: '不等同于宏观熵增的时间箭头' }
     ];
 
     symmetries.forEach(sym => {
@@ -6133,7 +5866,7 @@ function renderSymmetryBreaking() {
         3. 终极秩序 (CPT Theorem)
     </h3>
     <p style="color: #aaa; margin-bottom: 1rem; font-size: 0.8rem;">
-        C、P、T 联合变换，物理定律依然完美。
+        在局域、洛伦兹不变且满足标准量子场论基本条件的框架内，联合 CPT 对称性成立；按钮仅演示概念，不构成检验。
     </p>
 `;
     section3.appendChild(s3Header);
@@ -6227,22 +5960,22 @@ function renderSymmetryBreaking() {
             statusEl.textContent = 'Left-handed Neutrino';
             statusEl.style.color = '#aaa';
         } else if (cptState.stage === 1) {
-            nameEl.textContent = '右旋中微子';
-            statusEl.textContent = '❌ 404 Not Found';
+            nameEl.textContent = 'P：空间反演';
+            statusEl.textContent = '弱带电流并非在 P 下不变；不能推论右手粒子不存在';
             statusEl.style.color = '#ef4444';
             stepEls['P'].style.borderColor = '#ef4444';
             stepEls['P'].style.color = '#ef4444';
             stepEls['P'].style.background = 'rgba(239, 68, 68, 0.1)';
         } else if (cptState.stage === 2) {
-            nameEl.textContent = '右旋反中微子';
-            statusEl.textContent = '⚠️ 反物质 (Antimatter)';
+            nameEl.textContent = 'CP：再作电荷共轭';
+            statusEl.textContent = '部分弱过程会破坏 CP；不是所有反粒子都不允许';
             statusEl.style.color = '#f59e0b';
             stepEls['C'].style.borderColor = '#f59e0b';
             stepEls['C'].style.color = '#f59e0b';
             stepEls['C'].style.background = 'rgba(245, 158, 11, 0.1)';
         } else if (cptState.stage === 3) {
-            nameEl.textContent = 'CPT 守恒态';
-            statusEl.textContent = '✨ 物理定律成立';
+            nameEl.textContent = 'CPT：概念演示完成';
+            statusEl.textContent = '需理论前提；不是一次实验验证';
             statusEl.style.color = '#ffd700'; // Gold
 
             // Unify all indicators to Gold
@@ -6262,7 +5995,7 @@ function renderSymmetryBreaking() {
             if (!document.getElementById('cpt-success')) {
                 const successMsg = document.createElement('div');
                 successMsg.id = 'cpt-success';
-                successMsg.innerHTML = '✨ <strong>CPT 联合守恒验证通过！</strong>';
+                successMsg.innerHTML = '<strong>CPT 联合变换示意完成</strong>（按钮操作不等于实验或数学证明）';
                 successMsg.style.cssText = 'margin-top: 1rem; color: #ffd700; text-align: center; animation: fadeIn 1s; font-size: 0.9rem;';
                 cptContainer.appendChild(successMsg);
             }
@@ -6611,6 +6344,7 @@ function renderQFTVisualization() {
 
     function setMode(newMode) {
         mode = newMode;
+        if (toggleSwitch) toggleSwitch.setAttribute('aria-checked', String(mode === 'particle'));
         if (mode === 'particle') {
             toggleContainer.classList.add('particle-mode');
             btnParticle.classList.add('active');
@@ -6743,4 +6477,60 @@ function renderQFTVisualization() {
     }
 
     animate();
+}
+
+// Keyboard access for the quantum-field switch and modal dismissal.
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.modal.active').forEach(m => {m.classList.remove('active');m.classList.add('hidden');});
+    }
+    const sw=document.getElementById('qft-toggle-switch');
+    if ((event.key==='Enter'||event.key===' ') && document.activeElement===sw) {
+        event.preventDefault();sw.click();
+    }
+});
+// Pre-reading/observation/transfer prompts, intentionally collapsible.
+const lessonGuides = {
+    home:['从三个词开始：物质、相互作用、对称性','先选“标准模型”，再选一条力。注意：物理中的信息不是第四种基本相互作用。'],
+    grid:['这张表怎样区分构成物质的费米子与传递相互作用的玻色子？','先预测：为什么 W/Z 很重而光子质量为零？对质量和寿命要注意适用范围。'],
+    structure:['从夸克到原子，哪一步属于基本粒子，哪一步属于复合结构？','比较数量级，辨别“画出来的轨道”和“量子概率分布”。'],
+    higgs:['观察希格斯场耦合与质量的关系','先用“只看场耦合”对比三个粒子，再切换同动量模式；速度并非场阻力。'],
+    forces:['四种力都包含在粒子物理标准模型中吗？','尝试点击四张卡片，区分基本强相互作用与剩余核力；强度数字依赖过程与能标。'],
+    strong:['质子的质量能否直接用三个价夸克的静质量相加得到？','观察强相互作用能量的贡献；“胶子绳”只是概念性比喻。'],
+    weak:['中子俘获和 β 衰变有什么不同？','对照 ⁵⁹Co→⁶⁰Co→⁶⁰Ni 的质子数、中子数；5.27 年是半衰期，不是单个核的预定计时。'],
+    em:['原子中电子为何不能简单理解为行星绕太阳？','区分电荷相互作用与量子态；示意轨道不等于电子实际路径。'],
+    gravity:['引力为什么不被计入标准模型的三种规范相互作用？','把广义相对论已验证内容与量子引力研究设想分开。'],
+    symmetry:['守恒量与连续对称性之间是什么关系？','先预测改变系统条件后，哪个守恒量可能不再保持。'],
+    group:['U(1) 与 SU(2)/SU(3) 的运算次序有什么区别？','区分 U(1)电磁（破缺后）与 SU(2)L×U(1)Y 电弱结构；局域规范是理论描述的约束，不能把规范选择误认为新的可观测力。'],
+    'symmetry-breaking':['镜像操作后实验规律一定不变吗？','对照吴健雄实验中宇称不守恒的历史事实，区分 P、C、T 和 CPT。'],
+    spacetime:['绝对时空和相对时空的差异出现在哪些可验证预测中？','观察坐标图并检查模型适用前提，不把示意当作实际观测记录。'],
+    tribute:['杨—米尔斯理论解决了什么数学结构问题？','与诺特定理、标准模型规范结构、弱相互作用宇称破坏建立联系。'],
+    evidence:['理论预言怎样变成可靠的实验结论？','分别观察吴健雄实验、J/ψ 发现与希格斯发现；分清真实记录、示意图和理论解释。'],
+    limits:['哪些问题尚未被标准模型解释？','逐项区分已确认的观测事实、成功理论、尚待检验的假说。']
+};
+function installLessonGuide(view) {
+    const map={home:'view-home',grid:'view-matter-grid',structure:'view-matter-structure',higgs:'view-matter-higgs',forces:'view-energy-forces',strong:'view-energy-strong',weak:'view-energy-weak',em:'view-matter-em',gravity:'view-energy-gravity',symmetry:'view-info-symmetry',group:'view-info-group','symmetry-breaking':'view-symmetry-breaking',spacetime:'view-info-spacetime',tribute:'view-tribute',evidence:'view-science-evidence',limits:'view-science-limits'};
+    const section=document.getElementById(map[view]);const pair=lessonGuides[view];
+    if(!section||!pair)return;
+    section.querySelectorAll('.lesson-guide').forEach(el=>el.remove());
+    const guide=document.createElement('details');guide.className='lesson-guide';
+    const summary=document.createElement('summary');summary.textContent='学习任务：'+pair[0];
+    const msg=document.createElement('p');msg.textContent=pair[1];
+    guide.append(summary,msg);
+    // Give learners an authoritative route to inspect the claims, not only a simulation.
+    const sources=document.createElement('p');
+    sources.className='lesson-sources';
+    const references=[
+      ['CERN｜标准模型','https://home.cern/science/physics/standard-model/'],
+      ['PDG｜2026 粒子物理数据','https://pdg.lbl.gov/2026/tables/contents_tables.html']
+    ];
+    if (view==='tribute') references.push(['清华大学｜杨振宁先生生平','https://www.tsinghua.edu.cn/info/1173/121840.htm']);
+    sources.append(document.createTextNode('科学核验：'));
+    references.forEach(([label,href],i)=>{
+        if(i) sources.append(document.createTextNode(' · '));
+        const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;
+        sources.append(a);
+    });
+    guide.append(sources);
+    section.append(guide);
 }

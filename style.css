@@ -2846,3 +2846,130 @@ h1 {
         clip: rect(10px, 9999px, 20px, 0);
     }
 }
+/* === V2 QUALITY PATCH: responsive, accessible, science-grounded === */
+html { scroll-behavior:smooth; }
+body { display:block; width:100%; min-width:0; overflow-x:hidden; font-family:'Noto Sans SC','Outfit',system-ui,sans-serif; }
+.app-container { width:100%; min-width:0; max-width:100vw; }
+header { width:100%; }
+main { width:100%; min-width:0; }
+.view-section { max-width:100vw; min-width:0; }
+.view-section.active { min-width:0; }
+.nav-brand:focus-visible,.nav-btn:focus-visible,.hub-card:focus-visible,.nav-tribute:focus-visible,.particle-card:focus-visible,.weak-controls button:focus-visible {outline:3px solid #ffc861;outline-offset:3px;}
+.hub-card {cursor:pointer;}
+.lesson-guide { position:fixed; bottom:18px; right:20px; z-index:90; max-width:min(420px,calc(100vw - 28px)); background:rgba(8,17,42,.94); border:1px solid rgba(107,185,242,.55); border-radius:12px; box-shadow:0 10px 24px #0008; backdrop-filter:blur(8px); color:#d7e5ff; font-size:13px; line-height:1.5; }
+.lesson-guide summary {cursor:pointer; max-width:340px; font-weight:650; padding:10px 16px; color:#d8ecff;}
+.lesson-guide p {padding:0 16px 14px; max-width:410px;}
+.lesson-guide summary::marker {color:#48c6ff;}
+#view-matter-higgs .deep-dive-container { width:min(1600px,100%) !important; max-width:100% !important; box-sizing:border-box; }
+#view-matter-higgs .higgs-layout { min-width:0; gap:clamp(.75rem,2vw,2rem); }
+#higgs-stage {min-width:0; flex:1; }
+.higgs-cards {width:min(35%,390px); min-width:250px;}
+#view-matter-structure .structure-layout {width:100%; min-width:0;}
+#view-energy-forces .forces-hub-container {min-height:620px;height:auto;}
+.weak-lesson {margin:16px auto;max-width:1400px;padding:24px;border-radius:20px;background:rgba(16,18,43,.85);border:1px solid #ffffff1f;}
+.weak-heading h2 {font-size:clamp(1.3rem,2.5vw,2rem);margin-bottom:8px;color:#d5fbff;}
+.weak-heading p {color:#bbc9e4;font-size:14px;line-height:1.75;max-width:1000px;}
+.weak-demo-layout {display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr);gap:22px;align-items:stretch;margin-top:18px;}
+.weak-demo-stage {min-width:0;min-height:510px;position:relative;overflow:hidden;border-radius:14px;border:1px solid #71b4ea35;background:#0e1531;}
+.weak-beta-canvas {display:block;}
+.weak-explanation {display:flex;flex-direction:column;gap:12px;min-width:0;}
+.weak-reaction {color:#dff9ff;border:1px solid #59d0df66;background:#275a6740;border-radius:10px;padding:12px;text-align:center;font-size:clamp(1.05rem,2.5vw,1.4rem);font-family:Georgia,serif;font-weight:700;}
+.weak-steps {display:flex;flex-direction:column;gap:9px;}
+.weak-step {display:flex;flex-direction:column;gap:4px;opacity:.72;border:1px solid #ffffff12;border-left:3px solid #64748b;border-radius:9px;padding:10px 12px;background:#ffffff05;transition:background .2s,opacity .2s;}
+.weak-step b {color:#b4e8ff;font-size:14px;}.weak-step span {color:#d3def1;font-size:12px;line-height:1.6;}
+.weak-step.active {opacity:1;border-left-color:#4cdbd3;background:#185c7450;box-shadow:0 0 18px #4cdbd323;}
+.weak-caveat {color:#fbd4b7;font-size:12px;line-height:1.7;border:1px solid #eea25d44;border-radius:9px;padding:10px;background:#eea25d12;}
+.weak-controls {display:flex;gap:10px;}.weak-controls button {border:1px solid #4cdbd380;background:#13404d;color:#e9fcff;border-radius:8px;padding:10px 14px;cursor:pointer;font-size:13px;font-weight:650;}
+.weak-controls button:hover {background:#256273;}
+.weak-reference {border-top:1px solid #ffffff22;margin-top:16px;padding-top:14px;color:#aebcdb;font-size:13px;}
+@media(max-width:900px) {
+ .main-nav {justify-content:flex-start;gap:6px;overflow-x:auto;overflow-y:hidden;padding:0 10px;scrollbar-width:thin;}
+ .nav-center {flex:none;justify-content:flex-start;}
+ .nav-group {flex:none;}.nav-btn {padding:9px 12px;}
+ .main-nav::-webkit-scrollbar {height:4px;}.main-nav::-webkit-scrollbar-thumb {background:#5281a6;border-radius:10px;}
+ .deep-dive-container,.strong-layout {max-width:100% !important; min-width:0;}
+ .weak-demo-layout {grid-template-columns:1fr;}
+ .weak-demo-stage {min-height:350px;}
+ #view-matter-higgs .deep-dive-container {height:auto !important;min-height:0;padding:14px !important;}
+ #view-matter-higgs .higgs-layout {flex-direction:column;}
+ #higgs-stage {height:320px;flex:none;}
+ .higgs-cards {width:100%;min-width:0;gap:10px;flex-direction:row;justify-content:space-evenly;}
+ .higgs-card {flex:1;min-width:0;}
+ .forces-hub-container {grid-template-columns:1fr 1fr !important;height:auto !important;}
+ #view-matter-structure .structure-layout {overflow:visible;height:auto;flex-direction:column;padding:12px;gap:14px;}
+ #view-matter-structure .scale-ruler {width:100%;min-height:60px;}
+ #view-matter-structure .ruler-labels {height:auto;flex-direction:row;}
+ #view-matter-structure .ruler-track {display:none;}
+ #view-matter-structure .timeline-nav {width:100%;flex-direction:row;flex-wrap:wrap;gap:6px;}
+ #view-matter-structure .timeline-nav::before {display:none;}
+ #view-matter-structure .timeline-item {flex:1 1 160px;min-width:0;}
+ #view-matter-structure #structure-stage {min-height:330px;}
+ .gravity-trinity-grid {height:auto;}
+}
+@media(max-width:600px) {
+ .main-nav {height:54px;}
+ .nav-brand {padding:5px 8px;}.nav-brand-text {display:none;}
+ .nav-tribute {padding:7px 10px;}
+ .view-section {padding-bottom:70px;}
+ #home-triangle-stage {width:min(100%,550px) !important;height:470px;}
+ .home-container {min-height:100vh;padding:12px 0;}
+ .particle-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0;}
+ .particle-card {padding:12px 8px; min-height:110px;}
+ .particle-card .symbol {font-size:1.7rem;}
+ .particle-card[data-id="higgs"] {grid-column:auto;grid-row:auto;}
+ .periodic-table-frame {padding:10px !important;margin:10px auto !important;width:100% !important;}
+ .gen-label {display:none;}
+ .qft-module {grid-column:1/-1;}
+ .deep-dive-container {padding:12px;min-height:0;gap:14px;}
+ .visual-stage {min-height:260px;}
+ .higgs-cards {flex-direction:column;}
+ #higgs-stage {height:300px;}
+ .forces-hub-container {grid-template-columns:1fr !important;gap:10px;width:100%;padding:10px;}
+ .hub-card {min-height:250px;padding:12px;}
+ .weak-lesson {padding:12px;margin:8px 0;}
+ .weak-demo-stage {min-height:320px;}
+ .weak-reference {padding-bottom:6px;}
+ .structure-stage {max-width:100%;}
+ .lesson-guide {bottom:10px;right:10px;left:10px;max-width:none;}
+ .lesson-guide summary {max-width:none;}
+ #view-info-spacetime,#view-info-group,#view-info-symmetry,#view-energy-gravity {overflow-x:auto;}
+ #view-info-spacetime > *,#view-info-group > * {max-width:none;}
+ .gravity-trinity-grid {grid-template-columns:1fr !important;}.gravity-entropy {grid-column:auto;}
+ .modal-content {width:94vw;max-height:87vh;overflow:auto;padding:18px;}
+}
+@media(prefers-reduced-motion: reduce) {
+ *,*::before,*::after {animation-duration:.001ms !important;transition-duration:.001ms !important;}
+}
+
+/* Keep the weak canvas out of grid intrinsic sizing to prevent ResizeObserver feedback. */
+.weak-demo-stage {height:510px;}
+.weak-beta-canvas {position:absolute;inset:0;width:100%;height:100%;}
+@media(max-width:900px){.weak-demo-stage{height:350px;}}
+@media(max-width:600px){.weak-demo-stage{height:320px;}}
+
+/* Home diagram is scaled as a complete picture on phones. */
+#home-triangle-stage {max-width:100%;}
+#home-triangle-stage > div {max-width:100%;}
+#home-triangle-stage canvas {max-width:100%;object-fit:contain;}
+/* Disable the desktop-only hover tooltip and large icon in mobile ruler. */
+@media(max-width:600px){
+ #view-matter-structure .ruler-labels {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;width:100%;}
+ #view-matter-structure .ruler-label {display:block;min-width:0;padding:5px 2px;overflow:visible;}
+ #view-matter-structure .ruler-info {display:block;min-width:0;text-align:center;overflow:hidden;}
+ #view-matter-structure .ruler-name {font-size:11px;word-break:keep-all;}
+ #view-matter-structure .ruler-val {display:block;font-size:9px;line-height:1.3;white-space:normal;overflow-wrap:anywhere;}
+ #view-matter-structure .ruler-icon {display:none;}
+ #view-matter-structure .ruler-label::after {display:none;}
+ #view-matter-structure .timeline-nav {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+ #view-matter-structure .timeline-item {display:flex;min-width:0;padding:8px;}
+ #view-matter-structure .timeline-content h4 {font-size:12px;overflow-wrap:anywhere;}
+ #view-matter-structure .timeline-content p {font-size:11px;overflow-wrap:anywhere;}
+ #view-symmetry-breaking {overflow-x:hidden !important;}
+ #view-symmetry-breaking canvas {max-width:100% !important;}
+ #view-symmetry-breaking .deep-dive-container {max-width:100% !important;min-width:0 !important;}
+ #view-symmetry-breaking * {max-width:100%;}
+}
+/* Research links within each lesson prompt; legible on narrow screens */
+.lesson-sources {font-size: .8rem; opacity: .9; margin-top: .45rem; line-height: 1.7;}
+.lesson-sources a {color:#86d5ff; text-underline-offset:3px;}
+.lesson-sources a:hover,.lesson-sources a:focus-visible {color:#bfeaff;}

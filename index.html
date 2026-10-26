@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>粒子物理标准模型</title>
-    <link rel="stylesheet" href="style.css">
-    <link
+    <title>标准模型实验室｜高中生粒子物理交互课</title>
+    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="site_lessons.css?v=16">
+
+<link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 </head>
@@ -18,12 +20,12 @@
             <!-- Main Navigation - Top Dock Style -->
             <nav class="main-nav" id="main-nav">
                 <!-- Left: Brand/Home -->
-                <div class="nav-brand" onclick="switchView('home')">
+                <div class="nav-brand" role="button" tabindex="0" aria-label="返回首页" onclick="switchView('home')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchView('home')}">
                     <span class="nav-logo">◈</span>
                     <span class="nav-brand-text">统一框架</span>
                 </div>
 
-                <!-- Center: Three grouped sections -->
+                <!-- Center: Four grouped sections -->
                 <div class="nav-center">
                     <!-- Matter Group -->
                     <div class="nav-group nav-group-matter">
@@ -58,6 +60,16 @@
                             <button onclick="switchView('spacetime')" class="nav-btn">时空观</button>
                         </div>
                     </div>
+
+                    <div class="nav-divider"></div>
+
+                    <!-- Research Group: preserve the original information-group colors -->
+                    <div class="nav-group nav-group-info nav-group-research">
+                        <div class="nav-buttons">
+                            <button onclick="switchView('evidence')" class="nav-btn">怎么知道</button>
+                            <button onclick="switchView('limits')" class="nav-btn">理论边界</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Right: Golden Tribute Button -->
@@ -66,11 +78,12 @@
         </header>
 
         <!-- Main Content -->
-        <main>
+        <main id="main-learning-content">
             <!-- HOME VIEW -->
             <section id="view-home" class="view-section active">
                 <div class="home-container">
                     <div id="home-triangle-stage"></div>
+
                 </div>
             </section>
 
@@ -86,7 +99,7 @@
                 <div class="periodic-table-frame"
                     style="background: rgba(20, 20, 30, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin: 1rem auto; max-width: 1400px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);">
                     <div class="info-section active" id="view-info-home">
-                        <div <div class="particle-grid">
+                        <div class="particle-grid">
                             <!-- Generation Labels -->
                             <div class="gen-label">Ⅰ代</div>
                             <div class="gen-label">Ⅱ代</div>
@@ -98,61 +111,61 @@
                             <div class="particle-card scalar unstable" data-id="higgs">
                                 <div class="symbol">H</div>
                                 <div class="name">希格斯</div>
-                                <div class="mass">125.1 GeV/c²</div>
+                                <div class="mass">约 125 GeV/c²</div>
                                 <div class="spin">自旋: 0</div>
-                                <div class="decay">→ bb, WW, ZZ, γγ</div>
+                                <div class="decay">→ b b̄、WW*、ZZ*、γγ</div>
                             </div>
 
                             <!-- Fermions: Quarks -->
-                            <div class="particle-card quark generation-1 stable" data-id="up">
+                            <div class="particle-card quark generation-1 confined" data-id="up">
                                 <div class="symbol">u</div>
                                 <div class="name">上夸克</div>
-                                <div class="mass">2.2 MeV/c²</div>
+                                <div class="mass">约 2.2 MeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">稳定</div>
+                                <div class="decay">禁闭（不独立存在）</div>
                             </div>
                             <div class="particle-card quark generation-2 unstable" data-id="charm">
                                 <div class="symbol">c</div>
                                 <div class="name">粲夸克</div>
-                                <div class="mass">1.28 GeV/c²</div>
+                                <div class="mass">约 1.27 GeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">→ s + W⁺</div>
+                                <div class="decay">c → s + W⁺*（虚）</div>
                             </div>
                             <div class="particle-card quark generation-3 unstable" data-id="top">
                                 <div class="symbol">t</div>
                                 <div class="name">顶夸克</div>
-                                <div class="mass">173.1 GeV/c²</div>
+                                <div class="mass">约 173 GeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
                                 <div class="decay">→ b + W⁺</div>
                             </div>
-                            <div class="particle-card boson force stable" data-id="gluon">
+                            <div class="particle-card boson force confined" data-id="gluon">
                                 <div class="symbol">g</div>
                                 <div class="name">胶子</div>
                                 <div class="mass">0</div>
                                 <div class="spin">自旋: 1</div>
-                                <div class="decay">稳定</div>
+                                <div class="decay">禁闭（不独立存在）</div>
                             </div>
 
-                            <div class="particle-card quark generation-1 stable" data-id="down">
+                            <div class="particle-card quark generation-1 confined" data-id="down">
                                 <div class="symbol">d</div>
                                 <div class="name">下夸克</div>
-                                <div class="mass">4.7 MeV/c²</div>
+                                <div class="mass">约 4.7 MeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">稳定</div>
+                                <div class="decay">禁闭（不独立存在）</div>
                             </div>
                             <div class="particle-card quark generation-2 unstable" data-id="strange">
                                 <div class="symbol">s</div>
                                 <div class="name">奇夸克</div>
-                                <div class="mass">96 MeV/c²</div>
+                                <div class="mass">约 93 MeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">→ u + W⁻</div>
+                                <div class="decay">s → u + W⁻*（虚）</div>
                             </div>
                             <div class="particle-card quark generation-3 unstable" data-id="bottom">
                                 <div class="symbol">b</div>
                                 <div class="name">底夸克</div>
-                                <div class="mass">4.18 GeV/c²</div>
+                                <div class="mass">约 4.19 GeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">→ c + W⁻</div>
+                                <div class="decay">b → c + W⁻*（虚）</div>
                             </div>
                             <div class="particle-card boson force stable" data-id="photon">
                                 <div class="symbol">γ</div>
@@ -175,51 +188,51 @@
                                 <div class="name">μ子</div>
                                 <div class="mass">105.7 MeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">→ ν<sub>μ</sub> + W<sup>*</sup></div>
+                                <div class="decay">μ⁻ → e⁻ + νμ + ν̄e</div>
                             </div>
                             <div class="particle-card lepton generation-3 unstable" data-id="tau">
                                 <div class="symbol">τ</div>
                                 <div class="name">τ子</div>
                                 <div class="mass">1.777 GeV/c²</div>
                                 <div class="spin">自旋: 1/2</div>
-                                <div class="decay">→ ν<sub>τ</sub> + W<sup>*</sup></div>
+                                <div class="decay">τ⁻ → ντ + 轻子/强子等</div>
                             </div>
                             <div class="particle-card boson force unstable" data-id="z-boson">
                                 <div class="symbol">Z</div>
                                 <div class="name">Z玻色子</div>
-                                <div class="mass">91.2 GeV/c²</div>
+                                <div class="mass">约 91.2 GeV/c²</div>
                                 <div class="spin">自旋: 1</div>
-                                <div class="decay">→ qq̄, l⁺l⁻</div>
+                                <div class="decay">→ qq̄、ℓ⁺ℓ⁻、νν̄</div>
                             </div>
 
-                            <div class="particle-card lepton generation-1 stable" data-id="electron-neutrino">
+                            <div class="particle-card lepton generation-1 neutrino-flavor" data-id="electron-neutrino">
                                 <div class="symbol">ν<sub>e</sub></div>
                                 <div class="name">电子中微子</div>
                                 <div class="mass">
-                                    < 1 eV/c²</div>
+                                    味态；质量非定值</div>
                                         <div class="spin">自旋: 1/2</div>
-                                        <div class="decay">稳定</div>
+                                        <div class="decay">可发生味振荡</div>
                                 </div>
-                                <div class="particle-card lepton generation-2 stable" data-id="muon-neutrino">
+                                <div class="particle-card lepton generation-2 neutrino-flavor" data-id="muon-neutrino">
                                     <div class="symbol">ν<sub>μ</sub></div>
                                     <div class="name">μ中微子</div>
                                     <div class="mass">
-                                        < 0.17 MeV/c²</div>
+                                        味态；质量非定值</div>
                                             <div class="spin">自旋: 1/2</div>
-                                            <div class="decay">稳定</div>
+                                            <div class="decay">可发生味振荡</div>
                                     </div>
-                                    <div class="particle-card lepton generation-3 stable" data-id="tau-neutrino">
+                                    <div class="particle-card lepton generation-3 neutrino-flavor" data-id="tau-neutrino">
                                         <div class="symbol">ν<sub>τ</sub></div>
                                         <div class="name">τ中微子</div>
                                         <div class="mass">
-                                            < 18.2 MeV/c²</div>
+                                            味态；质量非定值</div>
                                                 <div class="spin">自旋: 1/2</div>
-                                                <div class="decay">稳定</div>
+                                                <div class="decay">可发生味振荡</div>
                                         </div>
                                         <div class="particle-card boson force unstable" data-id="w-boson">
                                             <div class="symbol">W<sup>±</sup></div>
                                             <div class="name">W<sup>±</sup>玻色子</div>
-                                            <div class="mass">80.4 GeV/c²</div>
+                                            <div class="mass">约 80.4 GeV/c²</div>
                                             <div class="spin">自旋: 1</div>
                                             <div class="decay">→ lν, qq̄'</div>
                                         </div>
@@ -230,7 +243,7 @@
                                                 <div class="qft-title">粒子只是场的涟漪</div>
                                                 <div class="qft-toggle">
                                                     <span class="toggle-label active" id="view-field-btn">场</span>
-                                                    <div class="toggle-switch" id="qft-toggle-switch">
+                                                    <div class="toggle-switch" id="qft-toggle-switch" role="switch" tabindex="0" aria-label="切换场与粒子视图" aria-checked="false">
                                                         <div class="toggle-knob"></div>
                                                     </div>
                                                     <span class="toggle-label" id="view-particle-btn">粒子</span>
@@ -239,12 +252,14 @@
                                             <canvas id="qft-canvas"></canvas>
                                             <div class="qft-desc">
                                                 宇宙不是空的，而是充满了量子场。<br>
-                                                粒子只是场被激发时产生的波纹。
+                                                粒子对应量子场的激发；水波只是类比，粒子不是肉眼可见的小水滴。
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="legend">
+                                    <p class="science-note" style="font-size:.83rem;color:#cbd5e1;margin:1rem 0;line-height:1.6;">
+<strong>数据阅读提示：</strong>质量为近似值；轻夸克的质量依赖重整化方案与能标，不能把三种价夸克的表中质量简单相加当成质子质量。中微子表格列的是<strong>味态</strong>：至少两个质量本征态具有非零质量，但不能给每种味态分配一个固定质量。夸克与胶子受禁闭约束，“未见自由态”并不等于“粒子稳定”。光子质量列 0 是标准模型的预测，实验给出的是质量上限；胶子也不能作为自由粒子直接称重。参见 <a href="https://pdg.lbl.gov/2026/tables/contents_tables.html" target="_blank" rel="noopener">PDG 2026</a>。</p>
+<div class="legend">
                                         <div class="legend-item"><span class="dot quark"></span>夸克</div>
                                         <div class="legend-item"><span class="dot lepton"></span>轻子</div>
                                         <div class="legend-item"><span class="dot boson"></span>规范玻色子</div>
@@ -268,28 +283,28 @@
                             <div class="ruler-label" data-level="quark" data-metaphor="如果夸克是一粒微尘...">
                                 <div class="ruler-info">
                                     <span class="ruler-name">夸克</span>
-                                    <span class="ruler-val">10⁻¹⁸m</span>
+                                    <span class="ruler-val">点状（未见内部结构）</span>
                                 </div>
                                 <span class="ruler-icon holographic">✨</span>
                             </div>
                             <div class="ruler-label" data-level="nucleon" data-metaphor="...核子就是一粒沙">
                                 <div class="ruler-info">
                                     <span class="ruler-name">核子</span>
-                                    <span class="ruler-val">10⁻¹⁵m</span>
+                                    <span class="ruler-val">约 10⁻¹⁵ m</span>
                                 </div>
                                 <span class="ruler-icon holographic">⏳</span>
                             </div>
                             <div class="ruler-label" data-level="nucleus" data-metaphor="...原子核是由几粒沙聚成的小石子">
                                 <div class="ruler-info">
                                     <span class="ruler-name">原子核</span>
-                                    <span class="ruler-val">10⁻¹⁴m</span>
+                                    <span class="ruler-val">约 10⁻¹⁵–10⁻¹⁴ m（随核种变化）</span>
                                 </div>
                                 <span class="ruler-icon holographic">🪨</span>
                             </div>
                             <div class="ruler-label" data-level="atom" data-metaphor="...原子是巨大的广场，石子在中心，电子在边缘闪烁">
                                 <div class="ruler-info">
                                     <span class="ruler-name">原子</span>
-                                    <span class="ruler-val">10⁻¹⁰m</span>
+                                    <span class="ruler-val">约 10⁻¹⁰ m</span>
                                 </div>
                                 <span class="ruler-icon holographic">🏙️</span>
                             </div>
@@ -306,7 +321,7 @@
                     <!-- Center: Stage -->
                     <div class="structure-stage" id="structure-stage">
                         <!-- Content rendered by JS -->
-                        <div class="instruction-text">点击右侧时间轴开启探索</div>
+                        <div class="instruction-text">点击右侧结构层级开启探索</div>
                     </div>
 
                     <!-- Right: Timeline Nav -->
@@ -322,7 +337,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h4>核子形成 (Nucleon)</h4>
-                                <p>3个夸克组成质子或中子，质量源于胶子场。</p>
+                                <p>质子或中子各有3个价夸克，并包含胶子与夸克—反夸克海；质量主要来自强相互作用系统的能量。</p>
                             </div>
                         </div>
                         <div class="timeline-item" data-step="nucleus">
@@ -336,7 +351,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h4>电磁束缚 (Electromagnetic Bound)</h4>
-                                <p>电子被电磁力束缚在原子核周围，形成概率云。</p>
+                                <p>电子处于以原子核为中心的量子态，其空间分布以概率云描述，而非确定的经典绕核轨道。</p>
                             </div>
                         </div>
                         <div class="timeline-item" data-step="matter">
@@ -372,13 +387,13 @@
                                         <span class="card-icon">⚡</span>
                                         <span class="card-title">光子 (Photon)</span>
                                     </div>
-                                    <p class="card-desc">光子是自由的。它对此场视而不见，因此保持光速，永恒零质量。</p>
+                                    <p class="card-desc">光子穿过希格斯场，却不因此获得静质量；在真空中以光速传播。</p>
                                     <div class="coupling-dashboard">
                                         <div class="coupling-label">
                                             <span>耦合度 (Coupling)</span>
-                                            <span>0%</span>
+                                            <span>不获得希格斯静质量</span>
                                         </div>
-                                        <div class="coupling-bar-track">
+                                        <div class="coupling-bar-track" title="高亮长度仅为视觉区分，并非定量比例">
                                             <div class="coupling-bar-fill" style="width: 0%; background: #fcd34d;">
                                             </div>
                                         </div>
@@ -394,14 +409,14 @@
                                         <span class="card-icon">⚛️</span>
                                         <span class="card-title">电子 (Electron)</span>
                                     </div>
-                                    <p class="card-desc">受到轻微阻碍，获得微小质量 (0.511 MeV)。</p>
+                                    <p class="card-desc">与希格斯场轻轻耦合，获得很小的静质量（0.511 MeV/c²）。</p>
                                     <div class="coupling-dashboard">
                                         <div class="coupling-label">
                                             <span>耦合度 (Coupling)</span>
-                                            <span>0.005%</span>
+                                            <span>极弱</span>
                                         </div>
-                                        <div class="coupling-bar-track">
-                                            <div class="coupling-bar-fill" style="width: 5%; background: #4ecdc4;">
+                                        <div class="coupling-bar-track" title="高亮长度仅为视觉区分，并非定量比例">
+                                            <div class="coupling-bar-fill" style="width: 8%; background: #4ecdc4;">
                                             </div>
                                         </div>
                                     </div>
@@ -416,13 +431,13 @@
                                         <span class="card-icon">🏋️</span>
                                         <span class="card-title">顶夸克 (Top Quark)</span>
                                     </div>
-                                    <p class="card-desc">与场剧烈纠缠，举步维艰，获得巨大质量 (173 GeV)。</p>
+                                    <p class="card-desc">与希格斯场强烈耦合，具有巨大的静质量（约 173 GeV/c²）。</p>
                                     <div class="coupling-dashboard">
                                         <div class="coupling-label">
                                             <span>耦合度 (Coupling)</span>
-                                            <span style="color: #ff6b6b;">MAX</span>
+                                            <span style="color: #ff6b6b;">极强</span>
                                         </div>
-                                        <div class="coupling-bar-track">
+                                        <div class="coupling-bar-track" title="高亮长度仅为视觉区分，并非定量比例">
                                             <div class="coupling-bar-fill"
                                                 style="width: 100%; background: #ff6b6b; box-shadow: 0 0 10px #ff6b6b;">
                                             </div>
@@ -458,8 +473,9 @@
             <!-- 2.1 Forces Web (The Central Hub) -->
             <section id="view-energy-forces" class="view-section">
                 <div class="forces-hub-container">
+ <p class="science-note" style="grid-column:1/-1;font-size:.81rem;color:#cbd5e1;text-align:center;line-height:1.5;">四张卡片的亮格仅表示概念层级，<strong>不是共同物理标尺</strong>：不同相互作用的耦合参数依赖能标、过程和定义；引力不属于粒子物理标准模型。</p>
                     <!-- 1. Electromagnetism (Top Left) -->
-                    <div class="hub-card" data-force="em" onclick="showSection('view-energy-em')">
+                    <div class="hub-card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" data-force="em" onclick="switchView('em')">
                         <div class="hub-bg-texture vector-field"></div>
                         <div class="hub-card-header">
                             <span class="hub-icon" style="color: #fcd34d;">⚡</span>
@@ -468,7 +484,7 @@
                         <div id="hub-stage-em" class="hub-canvas-container"></div>
                         <div class="hub-data">
                             <div class="data-row">
-                                <span class="data-label">强度 (Strength)</span>
+                                <span class="data-label">耦合（示意）</span>
                                 <div class="strength-blocks">
                                     <div class="s-block active"
                                         style="background: #fcd34d; box-shadow: 0 0 5px #fcd34d;"></div>
@@ -478,7 +494,7 @@
                                     <div class="s-block"></div>
                                     <div class="s-block"></div>
                                 </div>
-                                <span class="data-val">1/137</span>
+                                <span class="data-val">低能 α≈1/137</span>
                             </div>
                             <div class="data-row">
                                 <span class="data-label">射程 (Range)</span>
@@ -489,16 +505,16 @@
                     </div>
 
                     <!-- 2. Strong Force (Top Right) -->
-                    <div class="hub-card" data-force="strong" onclick="showSection('view-energy-strong')">
+                    <div class="hub-card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" data-force="strong" onclick="switchView('strong')">
                         <div class="hub-bg-texture fog-field"></div>
                         <div class="hub-card-header">
                             <span class="hub-icon" style="color: #ff6b6b;">☢️</span>
-                            <span class="hub-title">强核力 (Strong Force)</span>
+                            <span class="hub-title">强相互作用（含剩余核力）</span>
                         </div>
                         <div id="hub-stage-strong" class="hub-canvas-container"></div>
                         <div class="hub-data">
                             <div class="data-row">
-                                <span class="data-label">强度 (Strength)</span>
+                                <span class="data-label">耦合（示意）</span>
                                 <div class="strength-blocks">
                                     <div class="s-block active"
                                         style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
@@ -511,27 +527,27 @@
                                     <div class="s-block active"
                                         style="background: #ff6b6b; box-shadow: 0 0 8px #ff6b6b;"></div>
                                 </div>
-                                <span class="data-val">1 (Strongest)</span>
+                                <span class="data-val">随能标变化（αₛ）</span>
                             </div>
                             <div class="data-row">
                                 <span class="data-label">射程 (Range)</span>
                                 <span class="range-icon inward-icon">◉</span>
-                                <span class="data-val">极短 (Femtometer)</span>
+                                <span class="data-val">色禁闭；剩余核力约 fm 尺度</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- 3. Weak Force (Bottom Left) -->
-                    <div class="hub-card" data-force="weak" onclick="showSection('view-energy-weak')">
+                    <div class="hub-card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" data-force="weak" onclick="switchView('weak')">
                         <div class="hub-bg-texture fog-field"></div>
                         <div class="hub-card-header">
                             <span class="hub-icon" style="color: #4ecdc4;">⚛️</span>
-                            <span class="hub-title">弱核力 (Weak Force)</span>
+                            <span class="hub-title">弱相互作用 (Weak Force)</span>
                         </div>
                         <div id="hub-stage-weak" class="hub-canvas-container"></div>
                         <div class="hub-data">
                             <div class="data-row">
-                                <span class="data-label">强度 (Strength)</span>
+                                <span class="data-label">耦合（示意）</span>
                                 <div class="strength-blocks">
                                     <div class="s-block active"
                                         style="background: #4ecdc4; box-shadow: 0 0 5px #4ecdc4;"></div>
@@ -540,18 +556,18 @@
                                     <div class="s-block"></div>
                                     <div class="s-block"></div>
                                 </div>
-                                <span class="data-val">10⁻⁶</span>
+                                <span class="data-val">与能量有关</span>
                             </div>
                             <div class="data-row">
                                 <span class="data-label">射程 (Range)</span>
                                 <span class="range-icon inward-icon">○</span>
-                                <span class="data-val">亚原子 (Sub-atomic)</span>
+                                <span class="data-val">约 10⁻¹⁸ m（低能弱力）</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- 4. Gravity (Bottom Right) -->
-                    <div class="hub-card" data-force="gravity" onclick="showSection('view-energy-gravity')">
+                    <div class="hub-card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" data-force="gravity" onclick="switchView('gravity')">
                         <div class="hub-bg-texture grid-field"></div>
                         <div class="hub-card-header">
                             <span class="hub-icon" style="color: #60a5fa;">🌌</span>
@@ -560,7 +576,7 @@
                         <div id="hub-stage-gravity" class="hub-canvas-container"></div>
                         <div class="hub-data">
                             <div class="data-row">
-                                <span class="data-label">强度 (Strength)</span>
+                                <span class="data-label">耦合（示意）</span>
                                 <div class="strength-blocks">
                                     <!-- Empty blocks for Gravity -->
                                     <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
@@ -570,8 +586,7 @@
                                     <div class="s-block" style="border-color: rgba(96, 165, 250, 0.3);"></div>
                                 </div>
                                 <span class="data-val"
-                                    style="color: #60a5fa; text-shadow: 0 0 5px rgba(96, 165, 250, 0.5);">10⁻³⁹
-                                    (Extremely Weak)</span>
+                                    style="color: #60a5fa; text-shadow: 0 0 5px rgba(96, 165, 250, 0.5);">引力极弱（微观）</span>
                             </div>
                             <div class="data-row">
                                 <span class="data-label">射程 (Range)</span>
@@ -598,8 +613,7 @@
 
                         <div class="info-block">
                             <h3 class="holo-header">99% 的真相</h3>
-                            <div class="highlight-quote">你体重的 <span class="highlight-val">99%</span>，其实是被强力囚禁的<span
-                                    class="highlight-val">能量</span>。</div>
+                            <div class="highlight-quote">你体重的 <span class="highlight-val" title="这里是核子质量的数量级比喻，非人体所有质量成分的精确测量值">99%</span>，其实是被强力囚禁的<span class="highlight-val">能量</span>。</div>
                             <p>夸克本身几乎没有质量（仅占 1%）。是胶子场中狂暴的能量风暴，赋予了万物沉甸甸的质感。</p>
                         </div>
 
@@ -620,41 +634,83 @@
                 </div>
             </section>
 
-            <!-- 2.3 Weak Force (Origin) -->
+            <!-- V11: retain the ORIGINAL two-column composition, sphere renderer and three-beat timeline -->
             <section id="view-energy-weak" class="view-section">
-                <div class="deep-dive-container">
-                    <div class="visual-stage" id="weak-stage">
-                    </div>
-                    <div class="controls-panel">
-                        <h3>弱力：宇宙的炼金术 (Cosmic Alchemy)</h3>
-
-                        <div class="alchemy-timeline">
-                            <div class="timeline-item" id="text-mechanism">
-                                <div class="time-dot"></div>
-                                <div class="time-content">
-                                    <h4>1. 机制：β 衰变 (The Mechanism)</h4>
-                                    <p>中子变身 (n → p + e⁻)。弱力像手术刀一样修改原子核的质子数，改变物质本质。</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item" id="text-scene">
-                                <div class="time-dot"></div>
-                                <div class="time-content">
-                                    <h4>2. 场景：超新星爆发 (The Crucible)</h4>
-                                    <p><strong>死亡即新生</strong>。只有在恒星死亡（产生铁核并爆炸）的极端瞬间，弱力才能将铁 (Fe) 转化为重元素。</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item" id="text-product">
-                                <div class="time-dot"></div>
-                                <div class="time-content">
-                                    <h4>3. 产物：万物的起源 (Heavy Elements)</h4>
-                                    <p><strong>Fe → Co → Ni → Cu...</strong><br>你血液中的铁、指环上的金，皆诞生于此。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="deep-dive-container v11-weak-original">
+                <div class="visual-stage" id="weak-stage" aria-label="原版三维原子核：中子飞入，随后经历连续β衰变"></div>
+                <div class="controls-panel v11-weak-narrative">
+                  <h3>弱力：宇宙的炼金术 <span class="v11-weak-en">(Cosmic Alchemy)</span></h3>
+                  <div class="alchemy-timeline">
+                    <div class="timeline-item active" id="text-mechanism"><div class="time-dot"></div><div class="time-content">
+                      <h4>1. 机制：β 衰变 (The Mechanism)</h4><p><strong>中子变身</strong> (n → p + e⁻ + ν̄ₑ)。弱力像手术刀一样改变核内的质子数，元素身份随之改变。</p>
+                    </div></div>
+                    <div class="timeline-item" id="text-scene"><div class="time-dot"></div><div class="time-content">
+                      <h4>2. 场景：极端宇宙 (The Crucible)</h4><p><strong>死亡即新生。</strong>在恒星爆发与中子星并合等极端环境里，中子俘获与 β 衰变共同参与元素演化。</p>
+                    </div></div>
+                    <div class="timeline-item" id="text-product"><div class="time-dot"></div><div class="time-content">
+                      <h4>3. 产物：万物的起源 (Heavy Elements)</h4><p><strong>Fe → Co → Ni → Cu → Zn…</strong><br>你血液中的铁、指环上的金，都有深远的宇宙身世。</p>
+                    </div></div>
+                  </div>
+                  <div class="v11-weak-status" aria-live="polite">⁶⁷Fe + n → ⁶⁸Fe</div>
+                  <div class="v11-weak-actions" role="group" aria-label="控制原子核衰变动画">
+                    <button type="button" id="weak-pause">暂停</button><button type="button" id="weak-next">下一幕</button><button type="button" id="weak-replay">↺ 重播</button>
+                  </div>
+                  <details class="v11-quiet-details"><summary>关于这条核反应路径</summary>
+                    <p>先用示意的 <b>⁶⁷Fe + n → ⁶⁸Fe + γ</b> 表示中子俘获；随后沿选定的 A=68 β⁻ 分支展示 Fe→Co→Ni→Cu→稳定 Zn。中子俘获不是 β 衰变，只有后者在这里体现弱相互作用。</p>
+                    <p>核素可以有不同衰变分支或异构态，动画压缩时间，不表示每个原子核必经此链；其中的俘获步骤是机制示意，并非特定测得的反应截面。<a href="https://www.nndc.bnl.gov/ensdf/" target="_blank" rel="noopener noreferrer">核数据：NNDC ENSDF</a></p>
+                  </details>
                 </div>
+              </div>
+            </section>
+
+            <!-- Additional evidence module, intentionally after the original chapter sequence -->
+            <section id="view-science-evidence" class="view-section">
+              <article class="research-lesson evidence-lesson">
+                <header class="research-hero"><span class="research-eyebrow">科学方法 · 不是只相信漂亮动画</span>
+                  <h2>我们怎么知道？从预言到实验</h2>
+                  <p>粒子不是靠“看到一颗小球”来证实的。科学家从可检验预言出发，设计实验、测量探测器中的信号，并与背景和其他假说比较。<strong>本页所有曲线和粒子轨迹都是示意图，不是实验原始数据。</strong></p>
+                </header>
+                <div class="evidence-chain" aria-label="研究证据链">
+                  <div><b>① 提出预测</b><small>什么现象能区分不同理论？</small></div><span>→</span>
+                  <div><b>② 设计测量</b><small>控制条件与可观测量</small></div><span>→</span>
+                  <div><b>③ 处理数据</b><small>重建信号、估计背景</small></div><span>→</span>
+                  <div><b>④ 交叉确认</b><small>排除替代解释、复现</small></div>
+                </div>
+                <div class="evidence-tabs" role="group" aria-label="选择一个实验实例">
+                  <button type="button" class="active" data-experiment="wu">1957 · 宇称不守恒</button>
+                  <button type="button" data-experiment="jpsi">1974 · J/ψ</button>
+                  <button type="button" data-experiment="higgs">2012 · 希格斯粒子</button>
+                </div>
+                <div class="evidence-feature">
+                  <div class="evidence-graphic"><svg id="evidence-figure" role="img" aria-label="实验原理示意图" viewBox="0 0 650 325" preserveAspectRatio="xMidYMid meet"></svg><p class="research-figure-note">原理示意图 · 非原始实验记录，不可用于拟合或推导发现显著性。</p></div>
+                  <div class="evidence-explanation" aria-live="polite">
+                    <h3 id="evidence-title"></h3>
+                    <dl><dt>要检验的假说</dt><dd id="evidence-question"></dd><dt>真正测量的是什么</dt><dd id="evidence-measure"></dd><dt>测量支持了什么</dt><dd id="evidence-result"></dd><dt>仍不能从中推出什么</dt><dd id="evidence-limit"></dd></dl>
+                    <p class="evidence-primary" id="evidence-primary"></p>
+                  </div>
+                </div>
+                <div class="research-takeaway"><h3>从动画到科学判断，要多问三个问题</h3><p><strong>观测量是什么？</strong> 是探测器的径迹、能量或计数，不一定是目标粒子本身。<strong>误差和背景是什么？</strong> 必须区分统计涨落和真实信号。<strong>结论的边界是什么？</strong> 发现一种粒子，不意味着解决了所有关于质量、暗物质或宇宙起源的问题。</p></div>
+                <div class="research-next"><button type="button" onclick="switchView('limits')">下一步：标准模型解释不了什么 →</button><button type="button" onclick="switchView('symmetry-breaking')">返回：对称性破缺</button></div>
+              </article>
+            </section>
+            <section id="view-science-limits" class="view-section">
+              <article class="research-lesson limits-lesson">
+                <header class="research-hero"><span class="research-eyebrow">知识地图 · 理论成功与适用边界</span>
+                  <h2>标准模型解释不了什么？</h2>
+                  <p>标准模型对已知基本粒子及强、弱、电磁相互作用作出了大量成功预言，却不是一套包含所有自然现象的终极理论。区分<strong>观测事实、现有理论解释、尚未解决的问题</strong>，是学习现代物理的重要能力。</p>
+                </header>
+                <div class="limits-contrast"><div><b>它解释得好</b><p>夸克、轻子、规范玻色子的相互作用，希格斯机制，许多碰撞与衰变的概率和精密测量。</p></div><div><b>它仍解释不完</b><p>引力、暗物质的身份、中微子质量机制、宇宙物质—反物质失衡，以及基本参数为何取这些值。</p></div></div>
+                <div class="limits-grid">
+                  <details open><summary><b>01 引力</b><small>为什么不在粒子物理标准模型里？</small></summary><p><strong>我们知道：</strong>广义相对论成功描述引力和时空几何。<strong>还不知道：</strong>如何与量子理论构成经过实验验证的完整理论。不能把“未纳入标准模型”误读成“引力不存在”或“已经证明不能量子化”。</p><button type="button" onclick="switchView('gravity')">查看引力模块</button></details>
+                  <details><summary><b>02 暗物质</b><small>重力效应明确，粒子身份未知</small></summary><p><strong>我们知道：</strong>星系、星系团和宇宙学观测提供了指向额外引力来源的证据。<strong>还不知道：</strong>暗物质是否由新的基本粒子构成，若有又是哪一种；已知标准模型粒子不能自然解释全部暗物质现象。</p></details>
+                  <details><summary><b>03 中微子质量</b><small>振荡有证据，质量从何而来未定</small></summary><p><strong>我们知道：</strong>中微子振荡说明至少两个质量本征态之间存在质量平方差，最简的零质量中微子标准模型不够完整。<strong>还不知道：</strong>中微子是否是自己的反粒子，以及质量机制的具体形式。</p></details>
+                  <details><summary><b>04 物质与反物质失衡</b><small>为什么宇宙剩下了物质？</small></summary><p><strong>我们知道：</strong>实验观察到某些弱过程中的 CP 破坏。<strong>还不知道：</strong>为何可见宇宙中的普通物质远多于反物质；标准模型中已知 CP 破坏不足以解释全部观测事实。</p><button type="button" onclick="switchView('symmetry-breaking')">查看 C/P/T</button></details>
+                  <details><summary><b>05 三代粒子和质量参数</b><small>规律描述成功，数值来源不明</small></summary><p><strong>我们知道：</strong>三代费米子和不同汤川耦合可放入模型中计算。<strong>还不知道：</strong>为什么恰有三代、为什么质量和耦合常数呈现现在的数值与层级。模型能使用这些参数，但尚不能从其基本结构唯一推导所有参数值。</p><button type="button" onclick="switchView('grid')">返回粒子表</button></details>
+                  <details><summary><b>06 暗能量与宇宙加速膨胀</b><small>重要，但要分清理论领域</small></summary><p>宇宙加速膨胀来自天文观测；暗能量属于宇宙学的核心未解问题。它不是已在实验室发现的“标准模型新粒子”。这里纳入，是为了说明粒子物理标准模型并不等于完整宇宙学模型。</p></details>
+                </div>
+                <div class="research-takeaway"><h3>最后的判断原则</h3><p>“尚未解释”不等于“现有理论毫无价值”；“某个动画能演示”不等于“已经实验验证”。判断一项理论，应同时看它解释了什么、证据有多强、适用范围在哪里、哪些新结果可能推翻或扩展它。</p><p class="research-source">参考：<a href="https://home.cern/science/physics/standard-model/" target="_blank" rel="noopener noreferrer">CERN｜标准模型</a> · <a href="https://atlas.cern/Updates/Feature/LFV-FCNC" target="_blank" rel="noopener noreferrer">ATLAS｜超越标准模型的研究动机</a></p></div>
+                <div class="research-next"><button type="button" onclick="switchView('evidence')">查看证据链 ←</button><button type="button" onclick="switchView('home')">回到知识总图</button></div>
+              </article>
             </section>
 
             <!-- 2.4 Gravity -->
@@ -667,7 +723,7 @@
                         <ul class="concept-list">
                             <li><strong>广义相对论</strong>: 物质告诉时空如何弯曲。</li>
                             <li><strong>时空弯曲</strong>: 时空告诉物质如何运动。</li>
-                            <li><strong>非量子力</strong>: 目前唯一未被纳入标准模型的力。</li>
+                            <li><strong>理论拼图</strong>：引力尚未纳入粒子物理标准模型。</li>
                         </ul>
                     </div>
                 </div>
@@ -696,7 +752,7 @@
                         </h3>
                         <p
                             style="font-size: 0.9rem; color: #94a3b8; font-style: italic; margin-top: 0; margin-bottom: 1.5rem;">
-                            "Force is mandated by symmetry." — 所有的力，都是为了维持对称性而必须引入的几何修正。
+                            "Force is mandated by symmetry." — 对称性不只意味着守恒，也规定相互作用的几何法则。
                         </p>
 
                         <div class="glass-card-list" style="display: flex; flex-direction: column; gap: 1rem;">
@@ -761,7 +817,7 @@
                                 <p style="font-size: 1rem; color: #cbd5e1; margin: 0; line-height: 1.7;">
                                     高维旋转，<span style="color:#ef4444; font-weight:bold;">顺序至关重要</span> (AB≠BA)。<br>
                                     <span style="display:block; margin-top:0.6rem; color: #94a3b8; font-size: 0.9rem;">
-                                        ⚡ 场本身带有“荷”（电荷/色荷），导致胶子之间互纠缠，产生非线性强力。
+                                        ⚡ 规范场本身也能相互作用：胶子携带<strong>色荷</strong>，让强力呈现非线性。
                                     </span>
                                 </p>
                             </div>
@@ -792,12 +848,10 @@
                                     "Symmetry Dictates Interaction"
                                 </div>
                                 <p style="font-size: 1rem; color: #cbd5e1; margin: 0; line-height: 1.8;">
-                                    诺特定理揭示了守恒，而杨振宁将 <span style="color:#fff; font-weight:bold;">“规范不变性”</span>
-                                    提升为物理学的最高原则。<br>
+                                    诺特定理揭示了守恒，而杨振宁将 <span style="color:#fff; font-weight:bold;">“规范不变性”</span> 提升为物理学的最高原则。<br>
                                     <span
                                         style="display:block; margin-top:0.8rem; padding-left: 10px; border-left: 2px solid rgba(251, 191, 36, 0.5); color: #cbd5e1; font-size: 0.95rem;">
-                                        他预言：为了维持对称性，宇宙必须引入 <span style="color:#fbbf24; font-weight:bold;">补偿场
-                                            (Compensating Field)</span>。这正是“力”的起源。
+                                        他预言：为了维持对称性，宇宙必须引入 <span style="color:#fbbf24; font-weight:bold;">补偿场 (Compensating Field)</span>。这正是“力”的起源。
                                     </span>
                                 </p>
                             </div>
@@ -880,26 +934,28 @@
                 <p class="subtitle">Yang-Mills Theory: The Foundation of Modern Physics</p>
             </div>
             <div class="tribute-body">
-                <p><strong>杨振宁 (Chen-Ning Yang)</strong> 是当代最伟大的物理学家之一。他在1954年与罗伯特·米尔斯提出的<strong>杨-米尔斯理论
+                <p><strong>杨振宁 (Chen-Ning Yang)</strong> 是对现代理论物理产生重大影响的物理学家。他在1954年与罗伯特·米尔斯提出的<strong>杨-米尔斯理论
                         (Yang-Mills Theory)</strong>，是现代规范场论的基石。</p>
 
                 <div class="highlight-box">
                     <h3>核心贡献</h3>
-                    <p>标准模型中描述强相互作用（胶子）、弱相互作用（W/Z玻色子）和电磁相互作用（光子）的数学框架，本质上都是<strong>杨-米尔斯规范场论</strong>的不同表现形式。
+                    <p>标准模型基于 <strong>SU(3)ᶜ×SU(2)ᴸ×U(1)ʸ</strong> 规范结构：其中 SU(3)ᶜ 为强相互作用的色规范群，SU(2)ᴸ×U(1)ʸ 为电弱规范群（Y 表示弱超荷）；电磁 U(1)ₑₘ 是电弱对称性破缺后保留的规范对称性。SU(3) 与 SU(2) 属于非阿贝尔规范理论，U(1) 是阿贝尔群。电弱对称性破缺后，出现光子与 W/Z 玻色子等物理态。引力尚不包含在标准模型中。
                     </p>
                 </div>
 
                 <ul>
-                    <li>如果没有杨-米尔斯理论，我们就无法统一描述除引力之外的三种基本力。</li>
-                    <li>宇称不守恒定律（1957年诺贝尔奖）打破了物理学界的固有观念，直接影响了对弱相互作用的理解（如中微子和W/Z玻色子）。</li>
+                    <li>杨—米尔斯理论为非阿贝尔规范相互作用提供了重要框架；它并不意味着三种相互作用已经统一成一种力。</li>
+                    <li>李政道和杨振宁在 1956 年提出检验弱相互作用中宇称是否守恒的研究思路，吴健雄团队的实验确认了宇称不守恒；李、杨因此获得 1957 年诺贝尔物理学奖。</li>
                 </ul>
 
-                <p class="quote">"杨振宁是继爱因斯坦和狄拉克之后，20世纪物理学界最重要的巨匠之一。"</p>
+                <p class="quote">杨—米尔斯理论为现代规范场论的发展奠定了基础，也是标准模型理论结构的重要基石。</p>
             </div>
         </div>
     </div>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=16"></script>
+    <script src="site_lessons.js?v=16"></script>
+
 </body>
 
 </html>
